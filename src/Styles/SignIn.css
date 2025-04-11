@@ -1,66 +1,91 @@
 /* SignIn.css */
 .signin {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(#0048ff7b, #0048ff94),
-                url('/images/ImagenSignIn.jpg') no-repeat center center;
-    background-size: cover;
-  }
-  
-  
-  .Card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 2rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-    min-width: 320px;
-    max-width: .3vw;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .signin-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  input {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.75rem;
-    background-color: #fff;
-    color: #000;
-  }
-  
-  input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-  
-  button {
-    padding: 0.75rem;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0.75rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(#0048ff7b, #0048ff94),
+    url("/images/ImagenSignIn.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  min-height: 20rem;
+  min-width: 320px;
+  max-width: 0.3vw;
+  width: 100%;
+  text-align: center;
+}
+
+.signin-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.divBotonesLogin {
+  display: flex;
+  justify-content: end;
+  align-self: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* log in de no de google */
+.loginNormal {
+  border: solid 1px;
+  align-self: end;
+}
+
+.divBotonesLogin > div > p {
+  color: black;
+}
+
+.divBotonesLogin > div > button {
+  min-width: 7rem;
+  min-width: 150px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff !important;
+  color: white;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3 !important;
+}

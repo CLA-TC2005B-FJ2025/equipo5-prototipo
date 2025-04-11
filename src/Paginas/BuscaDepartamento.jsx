@@ -1,21 +1,23 @@
-import { useState } from 'react';
-import '../Styles/BuscaDepartamento.css';
+import { useState } from "react";
+import "../Styles/BuscaDepartamento.css";
 
 export default function BuscaDepartamento() {
-  const [id, setId] = useState('');
-  const [mensaje, setMensaje] = useState('');
+  const [id, setId] = useState("");
+  const [mensaje, setMensaje] = useState("");
 
   const departamentos = {
-    '1': 'Matemáticas',
-    '2': 'Ciencias Computacionales',
-    '3': 'Física',
+    1: "Matemáticas",
+    2: "Ciencias Computacionales",
+    3: "Física",
   };
 
   const buscar = () => {
-    if (!id) return setMensaje('Por favor ingresa un ID válido');
+    if (!id) return setMensaje("Por favor ingresa un ID válido");
 
     const nombre = departamentos[id];
-    setMensaje(nombre ? `Departamento: ${nombre}` : 'Departamento no encontrado');
+    setMensaje(
+      nombre ? `Departamento: ${nombre}` : "Departamento no encontrado",
+    );
   };
 
   return (
@@ -28,9 +30,10 @@ export default function BuscaDepartamento() {
         value={id}
         onChange={(e) => setId(e.target.value)}
       />
-      <button className="buscar-button" onClick={buscar}>Buscar</button>
+      <button className="buscar-button" onClick={buscar}>
+        Buscar
+      </button>
       {mensaje && <p className="buscar-mensaje">{mensaje}</p>}
     </section>
   );
 }
-

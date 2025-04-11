@@ -1,9 +1,5 @@
-import '../Styles/global.css';
+import "../Styles/global.css";
 
 export default function Card({ children }) {
-  return (
-    <div className="Card">
-      {children}
-    </div>
-  );
+  return <div className="Card">{children}</div>;
 }
