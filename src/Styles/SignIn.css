@@ -5,19 +5,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(128, 0, 64, 0.85), rgba(128, 0, 64, 0.85)),
+    background: linear-gradient(#0048ff7b, #0048ff94),
                 url('/images/ImagenSignIn.jpg') no-repeat center center;
     background-size: cover;
   }
   
   
-  .card {
+  .Card {
     background: white;
     padding: 2.5rem;
     border-radius: 2rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     min-width: 320px;
-    max-width: 400px;
+    max-width: .3vw;
     width: 100%;
     text-align: center;
   }
