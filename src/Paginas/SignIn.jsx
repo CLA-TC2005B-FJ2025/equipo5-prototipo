@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import "../Styles/SignIn.css";
+import logoGoogle from "../assets/googleLogo.png";
 
 export default function SignIn({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -34,10 +35,17 @@ export default function SignIn({ onLogin }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <hr />
           <div className="divBotonesLogin">
             <div className="loginGoogle">
-              <p>Iniciar sesión con</p>
-              <Button type="submit">G</Button>
+              <p className="subtituloUno">Iniciar sesión con</p>
+              <Button type="submit">
+                <img
+                  className="googleLogoImg"
+                  src={logoGoogle}
+                  alt="logo google"
+                />
+              </Button>
             </div>
             <div className="loginNormal">
               <Button type="submit">Log in</Button>
