@@ -14,7 +14,7 @@ export default function SignIn({ onLogin }) {
     if (email && password) {
       onLogin();
     } else {
-      alert("Completa todos los campos");
+      //alert("Completa todos los campos");
     }
   };
 

@@ -34,11 +34,11 @@ hr {
 }
 
 .input:focus {
-  border-color: #007bff;
+  border-color: #37526f;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.button {
+button {
   width: 100%;
   padding: 0.75rem;
   background-color: #007bff;
@@ -50,9 +50,6 @@ hr {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #495460;
-}
 
 .card {
   background: white;
@@ -67,4 +64,8 @@ button:hover {
 
 .subtituloUno {
   color: rgb(62, 62, 62) !important;
+}
+
+button:hover,  .Button:hover {
+  background-color: #ff0000 ;
 }
