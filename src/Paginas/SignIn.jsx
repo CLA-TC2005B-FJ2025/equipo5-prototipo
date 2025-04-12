@@ -39,16 +39,16 @@ export default function SignIn({ onLogin }) {
           <div className="div-botones-login">
             <div className="login-google btnOne">
               <p className="subtituloUno">Iniciar sesión con</p>
-              <Button type="submit">
+              <button type="button" onClick={() => console.log("Iniciando Sesion con google")}>
                 <img
                   className="google-logo"
                   src={logoGoogle}
                   alt="logo google"
                 />
-              </Button>
+              </button>
             </div>
             <div className="login-normal btnOne">
-              <Button type="submit">Log in</Button>
+              <button type="submit">Log in</button>
             </div>
           </div>
         </form>
