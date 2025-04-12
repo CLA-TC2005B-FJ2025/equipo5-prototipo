@@ -1,28 +1,43 @@
-/* SignIn.css */
+/* signin.css */
 .signin {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background:
-    linear-gradient(#0048ff7b, #0048ff94),
-    url("/images/ImagenSignIn.jpg") no-repeat center center;
+  background: linear-gradient(rgba(0, 72, 255, 0.48), rgba(0, 72, 255, 0.58)),
+              url("/images/ImagenSignIn.jpg") no-repeat center center;
   background-size: cover;
 }
 
-.Card {
+.Card{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: white;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  min-width: 360px;
+  max-width: 0.45vw;
+  text-align: center;
+  background-color: var(--background-light);
+  gap: 1rem;
+}
+
+
+.card-signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--background-light);
   padding: 2.5rem;
   border-radius: 2rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   min-height: 20rem;
   min-width: 320px;
-  max-width: 0.3vw;
-  width: 100%;
+  /* Ajusta el ancho según tu diseño */
+  width: 90%;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -33,74 +48,45 @@
   color: #333;
 }
 
+/* Formularios y botones específicos */
 form {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 1rem;
 }
 
-input {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.75rem;
-  background-color: #fff;
-  color: #000;
-}
-
-input:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.divBotonesLogin {
+.div-botones-login {
   display: flex;
-  justify-content: end;
-  align-self: center;
+  align-items: end;
   justify-content: center;
-  gap: 1rem;
   width: 100%;
+  gap: 1rem;
 }
 
-/* log in norma */
-.loginNormal {
-  border: solid 1px;
-  align-self: end;
+.btnOne {
+  flex: 1;
 }
 
-.divBotonesLogin > div > p {
-  color: black;
-}
-
-.divBotonesLogin > div > button {
-  min-width: 7rem;
-  min-width: 150px;
-  padding: 0.85rem 1rem;
-  height: 50px;
-  font-size: 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 0.35rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* login de google */
-.loginGoogle > p + button {
-  background-color: rgb(226, 226, 226) !important;
-  max-height: 50px;
+/* Estilos para login de Google */
+.login-google {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-light);
 }
-.googleLogoImg {
+
+.login-google > button {
+  background-color: var(--button-grey);
+}
+
+.login-google > p{
+  color: var(--text-dark);
+  font-size: .75rem;
+}
+
+.google-logo {
   height: 1.8rem;
   margin: 0;
   padding: 0;

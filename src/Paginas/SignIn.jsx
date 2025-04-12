@@ -20,7 +20,7 @@ export default function SignIn({ onLogin }) {
 
   return (
     <section className="signin">
-      <Card>
+      <Card className="card-signin">
         <h2 className="signin-title">HighPoint International School</h2>
         <form onSubmit={handleSubmit}>
           <Input
@@ -36,23 +36,24 @@ export default function SignIn({ onLogin }) {
             onChange={(e) => setPassword(e.target.value)}
           />
           <hr />
-          <div className="divBotonesLogin">
-            <div className="loginGoogle">
+          <div className="div-botones-login">
+            <div className="login-google btnOne">
               <p className="subtituloUno">Iniciar sesión con</p>
               <Button type="submit">
                 <img
-                  className="googleLogoImg"
+                  className="google-logo"
                   src={logoGoogle}
                   alt="logo google"
                 />
               </Button>
             </div>
-            <div className="loginNormal">
+            <div className="login-normal btnOne">
               <Button type="submit">Log in</Button>
             </div>
           </div>
         </form>
       </Card>
     </section>
+
   );
 }
