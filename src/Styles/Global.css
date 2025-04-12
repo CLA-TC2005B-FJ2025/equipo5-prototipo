@@ -6,6 +6,7 @@
   --background-dark: #242424;
   --background-light: #ffffff;
   --button-grey: #dcdcdc;
+  --button-grey-hover: #ededed;
   --text-light: rgba(255, 255, 255, 0.87);
   --text-dark: #213547;
   --form-bg: #f8f9fa;
@@ -72,6 +73,10 @@ button {
 
 button:hover {
   background-color: var(--primary-hover-color);
+}
+
+button:active {
+  opacity: .9;
 }
 
 hr {

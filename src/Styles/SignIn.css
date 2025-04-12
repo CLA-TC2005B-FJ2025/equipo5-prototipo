@@ -79,6 +79,14 @@ form {
 
 .login-google > button {
   background-color: var(--button-grey);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-google > button:hover {
+  background-color: var(--button-grey-hover);
 }
 
 .login-google > p{
