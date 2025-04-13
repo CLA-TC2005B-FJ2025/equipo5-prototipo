@@ -46,7 +46,7 @@ export default function SignIn({ onLogin }) {
           <div className="div-botones-login">
             <div className="login-google btnOne">
               <p className="subtituloUno">Iniciar sesión con</p>
-              <GoogleButton></GoogleButton>
+              <GoogleButton onLogin={onLogin} />
             </div>
             <div className="login-normal btnOne">
               <button type="submit">Log in</button>

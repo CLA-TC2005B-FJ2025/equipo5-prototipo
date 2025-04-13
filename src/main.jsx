@@ -8,6 +8,6 @@ createRoot(document.getElementById("root")).render(
   <GoogleOAuthProvider clientId="282021918737-r3df5eihoi0uplbhoskmdbm1ic4l9999.apps.googleusercontent.com">
     <StrictMode>
       <App />
-    </StrictMode>,
+    </StrictMode>
   </GoogleOAuthProvider>
 );
