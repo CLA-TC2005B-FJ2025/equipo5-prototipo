@@ -1,4 +1,4 @@
-import GoogleButton from "../components/GoogleButton"
+import GoogleButton from "../components/GoogleButton";
 import { useState } from "react";
 import Input from "../components/Input";
 import Card from "../components/Card";
@@ -12,14 +12,13 @@ export default function SignIn({ onLogin }) {
     console.log(response);
   };
   const errorMessage = (error) => {
-      console.log(error);
+    console.log(error);
   };
 
   function handleGoogleLogin(e) {
-
-    onLogin()
+    onLogin();
     localStorage.setItem("isLoggedIn", JSON.stringify(true));
-  } 
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,7 +53,7 @@ export default function SignIn({ onLogin }) {
           <div className="div-botones-login">
             <div className="login-google btnOne">
               <p className="subtituloUno">Iniciar sesión con</p>
-              <GoogleButton onLogin={(handleGoogleLogin)} />
+              <GoogleButton onLogin={handleGoogleLogin} />
             </div>
             <div className="login-normal btnOne">
               <button type="submit">Log in</button>
@@ -63,6 +62,5 @@ export default function SignIn({ onLogin }) {
         </form>
       </Card>
     </section>
-
   );
 }

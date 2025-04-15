@@ -5,12 +5,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 72, 255, 0.48), rgba(0, 72, 255, 0.58)),
-              url("/images/ImagenSignIn.jpg") no-repeat center center;
+  background:
+    linear-gradient(rgba(0, 72, 255, 0.48), rgba(0, 72, 255, 0.58)),
+    url("/images/ImagenSignIn.jpg") no-repeat center center;
   background-size: cover;
 }
 
-.Card{
+.Card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +24,6 @@
   background-color: var(--background-light);
   gap: 1rem;
 }
-
 
 .card-signin {
   display: flex;
@@ -89,9 +89,9 @@ form {
   background-color: var(--button-grey-hover);
 }
 
-.login-google > p{
+.login-google > p {
   color: var(--text-dark);
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .google-logo {

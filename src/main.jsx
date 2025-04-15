@@ -13,8 +13,8 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/dashboard" element={<Dashboard />} />
-        </Routes> 
+        </Routes>
       </BrowserRouter>
     </StrictMode>
-  </GoogleOAuthProvider>
+  </GoogleOAuthProvider>,
 );

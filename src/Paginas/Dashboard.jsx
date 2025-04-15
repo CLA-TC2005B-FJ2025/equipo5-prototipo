@@ -2,17 +2,17 @@ import { useEffect } from "react";
 import LogoutButton from "../components/BotonLogout";
 import { useNavigate } from "react-router";
 
-export default function Dashboard(){
+export default function Dashboard() {
   const isLogged = JSON.parse(localStorage.getItem("isLoggedIn"));
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLogged){
+    if (!isLogged) {
       navigate("/");
-    } 
+    }
   }, [isLogged, navigate]);
 
-  if(!isLogged){
+  if (!isLogged) {
     return null;
   }
 
@@ -21,5 +21,5 @@ export default function Dashboard(){
       <h1>DASHBOARD</h1>
       <LogoutButton></LogoutButton>
     </div>
-  )
+  );
 }

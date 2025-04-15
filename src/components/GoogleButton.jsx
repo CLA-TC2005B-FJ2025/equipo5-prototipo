@@ -6,7 +6,7 @@ export default function GoogleButton({ onLogin }) {
   const login = useGoogleLogin({
     onSuccess: (tokenResponse) => {
       console.log("Login Success:", tokenResponse);
-      console.log("adsasda")
+      console.log("adsasda");
       onLogin(); // funcion para validar el login
     },
     onError: () => {
@@ -16,11 +16,7 @@ export default function GoogleButton({ onLogin }) {
 
   return (
     <button className="google-btn" onClick={() => login()}>
-      <img
-        className="google-logo"
-        src={logoGoogle}
-        alt="logo google"
-      />
+      <img className="google-logo" src={logoGoogle} alt="logo google" />
     </button>
   );
 }

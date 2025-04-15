@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-export default function LogoutButton () {
+export default function LogoutButton() {
+  const [logOut, setLogOut] = useState("");
+  const navigate = useNavigate();
 
-    const [logOut, setLogOut] = useState("");
-    const navigate = useNavigate();
+  useEffect(() => {
+    if (logOut) {
+      navigate("/");
+      localStorage.setItem("isLoggedIn", JSON.stringify(false));
+    }
+  });
 
-    useEffect(() =>{
-        if (logOut){
-            navigate("/");
-            localStorage.setItem("isLoggedIn", JSON.stringify(false)); 
-        }
-    })
-
-    return(
-        <button onClick={() => setLogOut(true)}>Salir</button>
-    )
+  return <button onClick={() => setLogOut(true)}>Salir</button>;
 }
