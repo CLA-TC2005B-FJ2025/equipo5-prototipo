@@ -1,4 +1,4 @@
-import GoogleButton from "../components/Button"
+import GoogleButton from "../components/GoogleButton"
 import { useState } from "react";
 import Input from "../components/Input";
 import Card from "../components/Card";
@@ -15,10 +15,19 @@ export default function SignIn({ onLogin }) {
       console.log(error);
   };
 
+  function handleGoogleLogin(e) {
+
+    onLogin()
+    localStorage.setItem("isLoggedIn", JSON.stringify(true));
+  } 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
       onLogin();
+      //aqui es donde vamos a tener que implementar la verificacion hacia la base de datos si no es con google!
+      //por el momento estoy asumiendo que todo bn, sino no deberia de saltar a la linea de abajo
+      localStorage.setItem("isLoggedIn", JSON.stringify(true));
     } else {
       //alert("Completa todos los campos");
     }
@@ -45,7 +54,7 @@ export default function SignIn({ onLogin }) {
           <div className="div-botones-login">
             <div className="login-google btnOne">
               <p className="subtituloUno">Iniciar sesión con</p>
-              <GoogleButton onLogin={onLogin} />
+              <GoogleButton onLogin={(handleGoogleLogin)} />
             </div>
             <div className="login-normal btnOne">
               <button type="submit">Log in</button>

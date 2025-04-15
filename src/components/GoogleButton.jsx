@@ -6,6 +6,7 @@ export default function GoogleButton({ onLogin }) {
   const login = useGoogleLogin({
     onSuccess: (tokenResponse) => {
       console.log("Login Success:", tokenResponse);
+      console.log("adsasda")
       onLogin(); // funcion para validar el login
     },
     onError: () => {

@@ -1,19 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SignIn from "./Paginas/SignIn";
-import BuscaDepartamento from "./Paginas/BuscaDepartamento";
 import { useNavigate } from "react-router";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navegate = useNavigate();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate("/dashboard");
+    }
+  }, [isLoggedIn, navigate]);
 
   return (
     <main>
-      {isLoggedIn ? (
-        navegate("/dashboard")
-      ) : (
-        <SignIn onLogin={() => setIsLoggedIn(true)} />
-      )}
+      <SignIn onLogin={() => setIsLoggedIn(true)} />
     </main>
   );
 }
