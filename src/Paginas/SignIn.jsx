@@ -1,9 +1,8 @@
+import GoogleButton from "../components/Button"
 import { useState } from "react";
 import Input from "../components/Input";
 import Card from "../components/Card";
 import "../Styles/SignIn.css";
-import GoogleButton from "../components/Button"
-import { GoogleLogin } from '@react-oauth/google';
 
 export default function SignIn({ onLogin }) {
   const [email, setEmail] = useState("");
