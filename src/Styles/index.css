@@ -21,8 +21,10 @@ body {
   height: 100vh;
   background-color: var(--background-light);
   color: var(--text-dark);
+}
 
+.MainPageLayout {
+  height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
-  
 }

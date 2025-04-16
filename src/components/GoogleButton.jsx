@@ -15,11 +15,7 @@ export default function GoogleButton({ onLogin }) {
 
   return (
     <button className="google-btn" onClick={() => login()}>
-      <img
-        className="google-logo"
-        src={logoGoogle}
-        alt="logo google"
-      />
+      <img className="google-logo" src={logoGoogle} alt="logo google" />
     </button>
   );
 }
