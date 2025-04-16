@@ -1,5 +1,5 @@
 import highpointLogo from "../../public/images/highpointLogo.png"
-import DashboardButton from "./DashboardButton"
+import SidebarButton from "./SidebarButton"
 
 import dashboardIcon from "../../public/images/sidebar/dashboard.svg"
 import subirArchivoIcon from "../../public/images/sidebar/upload.svg"
@@ -8,37 +8,57 @@ import encuestaIcon from "../../public/images/sidebar/tabla.svg"
 import comentarioIcon from "../../public/images/sidebar/sms.svg"
 import "../Styles/Sidebar.css"
 
+import { useNavigate } from "react-router"
 
-export default function Sidebar(){
+
+export default function Sidebar({ botonActivoAct }){
+    const navigate = useNavigate();
+
+    function navergarPestana(e) {
+        console.log("navegando a", e )
+        navigate(`/${e}`);
+    }
+    console.log("boton activo " + botonActivoAct)
+
     return (
         <div>
             <div><img src={highpointLogo} width={200} alt="logo highpoint" /></div>
             <hr />
             <div className="contenedorBotones">
-                <DashboardButton
+                <SidebarButton
                     imgSrc={dashboardIcon}
                     content={"Dashboard"}
                     classN={"dashboardButton"}
+                    active={botonActivoAct === "Dashboard"}
+                    onClick={() => navergarPestana("dashboard")}
                 />
-                <DashboardButton
+                <SidebarButton
                     imgSrc={subirArchivoIcon}
                     content={"Subir Archivo"}
                     classN={"dashboardButton"}
+                    active={botonActivoAct === "Subir Archivo"}
+                    onClick={() => navergarPestana("subirArchivo")}
                 />
-                <DashboardButton
+                <SidebarButton
                     imgSrc={nuevoPerfilIcon}
                     content={"Nuevo Perfil"}
                     classN={"dashboardButton"}
+                    active={botonActivoAct === "Nuevo Perfil"}
+                    onClick={() => navergarPestana("nuevoPerfil")}
                 />
-                <DashboardButton
+                <SidebarButton
                     imgSrc={encuestaIcon}
                     content={"Encuestas Activas"}
                     classN={"dashboardButton"}
+                    active={botonActivoAct === "Encuestas Activas"}
+                    onClick={() => navergarPestana("encuestasActivas")}
                 />
-                <DashboardButton
+                <SidebarButton
                     imgSrc={comentarioIcon}
                     content={"Gestión de comentarios"}
                     classN={"dashboardButton"}
+                    active={botonActivoAct === "Gestión de comentarios"}
+                    onClick={() => navergarPestana("gestionComentarios")}
                 />
             </div>
 

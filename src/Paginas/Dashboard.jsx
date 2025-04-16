@@ -20,7 +20,7 @@ export default function Dashboard() {
   return (
     <div className="Sidebar">
       {/* <h1>DASHBOARD</h1> */}
-      <Sidebar ></Sidebar>
+      <Sidebar botonActivoAct="Dashboard" ></Sidebar>
       {/* <LogoutButton></LogoutButton> */}
     </div>
   );

@@ -71,3 +71,19 @@
 .dashboardButton > button > div:first-child {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Aplicar estilos de hover también cuando el botón está activo */
+.botonActivo > button > div:first-child{
+    background-color: var(--primary-hover-color);
+    filter: none;
+}
+
+.botonActivo > button,
+.botonActivo > button > div{
+    background-color: white;
+    color: var(--text-dark-two);
+}
+
+.botonActivo > button > div > img {
+    filter: none;
+}
