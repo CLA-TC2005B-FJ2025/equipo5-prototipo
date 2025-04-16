@@ -21,6 +21,9 @@ export default function NuevoPerfil() {
       <div className="Sidebar">
         <Sidebar botonActivoAct={"Nuevo Perfil"}></Sidebar>
       </div>
+      <div className="MainContent">
+        <h1>NUEVO PERFIL</h1>
+      </div>
     </div>
   );
 }
