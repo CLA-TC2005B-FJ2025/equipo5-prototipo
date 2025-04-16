@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import LogoutButton from "../components/BotonLogout";
 import { useNavigate } from "react-router";
+import Sidebar from "../components/Sidebar";
 
 export default function Dashboard() {
   const isLogged = JSON.parse(localStorage.getItem("isLoggedIn"));
@@ -17,9 +18,10 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
-      <h1>DASHBOARD</h1>
-      <LogoutButton></LogoutButton>
+    <div className="Sidebar">
+      {/* <h1>DASHBOARD</h1> */}
+      <Sidebar ></Sidebar>
+      {/* <LogoutButton></LogoutButton> */}
     </div>
   );
 }

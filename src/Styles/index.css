@@ -18,11 +18,11 @@ a:hover {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: var(--background-dark);
-  color: var(--text-light);
+  height: 100vh;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  
 }

@@ -1,0 +1,73 @@
+.Sidebar {
+    background-color: rgb(190, 190, 190);
+    padding: 2rem;
+    height: 100%;
+    background-color: var(--background-light);
+}
+
+.contenedorBotones{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+/* Todos los estilos de los botones dentro del sidebar */
+.dashboardButton > button {
+    background-color: var(--background-light);
+    display: flex;
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* esta clase hacer targe a dos divs dentro del boton, uno tiene la imagen y el otro el texto del boton */
+.dashboardButton > button > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+/* el primer div (es la imagen), pero esta clase es para cambiar del color de fondo*/
+.dashboardButton > button > div:first-child{
+    background-color: #fff;
+    padding: .2rem;
+    border-radius: 9px;
+    height: 30px;
+    width: 30px;
+}
+
+/* es la imagen como tal, el filtro es para ponerla azulita */
+.dashboardButton > button > div > img {
+    width: 22px;
+    height: 22px;
+    padding: .2rem;
+    border-radius: 5px;
+    filter: brightness(0) saturate(100%) invert(17%) sepia(88%) saturate(7459%) hue-rotate(248deg) brightness(86%) contrast(124%);
+}
+
+/* Estilos de hover de los botones del sidebar */
+
+.dashboardButton > button:hover,
+.dashboardButton > button:hover > div{
+    background-color: #fff;
+    color: var(--text-dark-two);
+}
+
+/* cuando se haga hover en el boton, cambiar el color de fondo del icono y quitar el filtro */
+.dashboardButton > button:hover > div:first-child {
+    background-color: var(--primary-hover-color);
+}
+.dashboardButton > button:hover > div > img{
+    filter: none;
+}
+
+/* Todas las transiciones */
+.dashboardButton > button,
+.dashboardButton > button > div,
+.dashboardButton > button > div:first-child {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
