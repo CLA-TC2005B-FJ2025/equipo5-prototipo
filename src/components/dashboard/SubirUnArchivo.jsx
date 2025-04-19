@@ -28,21 +28,32 @@ export default function SubirUnArchivo() {
 
   function dropHandler(e) {
     e.preventDefault();
+    setAnimacion(false);
     handleFiles(e.dataTransfer.files);
   }
 
   function dragoverHandler(e) {
     e.preventDefault();
+    setAnimacion(true);
   }
 
+  function dragLeaveHandler(e) {
+    e.preventDefault();
+    setAnimacion(false);
+  }
+
+  //useState para manejar animacion de cuando se esta arrastrando un archivo!
+  const [animacion, setAnimacion] = useState(false);
+  
   return (
     <div className="subirArchivoContainer">
       <h2>Subir un archivo</h2>
 
       <div
-        className="dropzone"
+        className={`dropzone ${animacion ? "activo" : ""}`}
         onDrop={dropHandler}
         onDragOver={dragoverHandler}
+        onDragLeave={dragLeaveHandler}
         tabIndex="0"
       >
         <img

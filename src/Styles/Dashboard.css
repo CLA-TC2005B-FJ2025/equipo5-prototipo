@@ -91,3 +91,8 @@ input[type="file"] {
   background-color: var(--button-grey);
   border-radius: 0.5rem;
 }
+
+/* clase para animar cuando se esta soltando un archivo */
+.activo{
+  background-color: var(--button-grey);
+}
