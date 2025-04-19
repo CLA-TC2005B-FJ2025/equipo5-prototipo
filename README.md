@@ -1,12 +1,18 @@
-# React + Vite
+# Highpoint International School Ecoa's
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projecto repositorio contiene el Front End para el sistema de Ecoa's de Highpoint
+Para correrlo dentro de tu localhost o instanacia de codespaces, ejecuta los siguientes comandos
 
-Currently, two official plugins are available:
+```sh
+  npm install
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```sh
+  npm run dev
+```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Dentro de tu navegador ir a la liga dada por la terminal 
+en este caso es:
+```sh
+  http://localhost:5173/
+```
