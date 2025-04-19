@@ -1,6 +1,6 @@
 import "../Styles/global.css";
 
-export default function Input({ type, placeholder, value, onChange }) {
+export default function Input({ type, placeholder, value, onChange, accept }) {
   return (
     <input
       className="Input"
@@ -8,6 +8,7 @@ export default function Input({ type, placeholder, value, onChange }) {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      accept={accept}
     />
   );
 }
