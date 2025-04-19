@@ -9,6 +9,7 @@ export default function LogoutButton() {
     if (logOut) {
       navigate("/");
       localStorage.setItem("isLoggedIn", JSON.stringify(false));
+      localStorage.setItem("userName", "");
     }
   });
 

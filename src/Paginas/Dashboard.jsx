@@ -1,7 +1,9 @@
-import { useEffect } from "react";
 import LogoutButton from "../components/BotonLogout";
-import { useNavigate } from "react-router";
 import Sidebar from "../components/Sidebar";
+import SubirUnArchivo from "../components/dashboard/SubirUnArchivo";
+import NavBar from "../components/NavBar";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 import "../Styles/Dashboard.css";
 
 export default function Dashboard() {
@@ -24,7 +26,9 @@ export default function Dashboard() {
         <Sidebar botonActivoAct="Dashboard"></Sidebar>
       </div>
       <div className="MainContent">
+        <NavBar Usuario={localStorage.getItem("userName")}></NavBar>
         <h1>DASHBOARD</h1>
+        <SubirUnArchivo></SubirUnArchivo>
         <LogoutButton></LogoutButton>
       </div>
     </div>

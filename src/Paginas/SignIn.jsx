@@ -17,7 +17,6 @@ export default function SignIn({ onLogin }) {
 
   function handleGoogleLogin(e) {
     onLogin();
-    localStorage.setItem("isLoggedIn", JSON.stringify(true));
   }
 
   const handleSubmit = (e) => {
@@ -26,11 +25,17 @@ export default function SignIn({ onLogin }) {
       onLogin();
       //aqui es donde vamos a tener que implementar la verificacion hacia la base de datos si no es con google!
       //por el momento estoy asumiendo que todo bn, sino no deberia de saltar a la linea de abajo
+      localStorage.setItem("userName", getNombre(email)); //despues hay que actulizar este para que saque el nombre conforme al correo en la BDD
       localStorage.setItem("isLoggedIn", JSON.stringify(true));
     } else {
       //alert("Completa todos los campos");
     }
   };
+
+  const getNombre = (email) =>{
+    let nombre = email.split("@")[0];
+    return nombre.charAt(0).toUpperCase() + String(nombre).slice(1); //primera letra mayuscula
+  }
 
   return (
     <section className="signin">

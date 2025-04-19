@@ -1,15 +1,37 @@
 import "../Styles/global.css";
 import { useGoogleLogin } from "@react-oauth/google";
 import logoGoogle from "../assets/googleLogo.png";
+import axios from "axios";
 
 export default function GoogleButton({ onLogin }) {
   const login = useGoogleLogin({
-    onSuccess: (tokenResponse) => {
+    onSuccess: async (tokenResponse) => {
       console.log("Login Success:", tokenResponse);
-      onLogin(); // funcion para validar el login, osea para q valla a dashboard
+
+      try {
+        const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+          headers: {
+            Authorization: `Bearer ${tokenResponse.access_token}`,
+          },
+        });
+
+        const user = {
+          name: res.data.name,
+          email: res.data.email,
+          picture: res.data.picture,
+        };
+        console.log(user);
+
+        localStorage.setItem("userName", user.name);
+        localStorage.setItem("isLoggedIn", JSON.stringify(true));
+
+        onLogin(user); //pasar el usuario al componente padre
+      } catch (err) {
+        console.error("Error fetching user info:", err);
+      }
     },
     onError: () => {
-      console.log("Login Failed");
+      console.log("Google login failed");
     },
   });
 

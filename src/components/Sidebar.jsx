@@ -17,7 +17,6 @@ export default function Sidebar({ botonActivoAct }) {
     // console.log("navegando a", e )
     navigate(`/${e}`);
   }
-  console.log("boton activo " + botonActivoAct);
 
   return (
     <div>
