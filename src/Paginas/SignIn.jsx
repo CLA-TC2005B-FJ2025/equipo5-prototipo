@@ -32,10 +32,10 @@ export default function SignIn({ onLogin }) {
     }
   };
 
-  const getNombre = (email) =>{
+  const getNombre = (email) => {
     let nombre = email.split("@")[0];
     return nombre.charAt(0).toUpperCase() + String(nombre).slice(1); //primera letra mayuscula
-  }
+  };
 
   return (
     <section className="signin">

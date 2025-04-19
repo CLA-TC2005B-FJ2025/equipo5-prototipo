@@ -11,8 +11,9 @@ Para correrlo dentro de tu localhost o instanacia de codespaces, ejecuta los sig
   npm run dev
 ```
 
-Dentro de tu navegador ir a la liga dada por la terminal 
+Dentro de tu navegador ir a la liga dada por la terminal
 en este caso es:
+
 ```sh
   http://localhost:5173/
 ```

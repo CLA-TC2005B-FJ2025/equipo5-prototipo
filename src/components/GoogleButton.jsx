@@ -9,11 +9,14 @@ export default function GoogleButton({ onLogin }) {
       console.log("Login Success:", tokenResponse);
 
       try {
-        const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
-          headers: {
-            Authorization: `Bearer ${tokenResponse.access_token}`,
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${tokenResponse.access_token}`,
+            },
           },
-        });
+        );
 
         const user = {
           name: res.data.name,
