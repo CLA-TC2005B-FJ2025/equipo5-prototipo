@@ -25,11 +25,15 @@ export default function Dashboard() {
       <div className="Sidebar">
         <Sidebar botonActivoAct="Dashboard"></Sidebar>
       </div>
-      <div className="MainContent">
+      <div className="Navbar"> 
         <NavBar Usuario={localStorage.getItem("userName")}></NavBar>
-        <h1>DASHBOARD</h1>
-        <SubirUnArchivo></SubirUnArchivo>
-        <LogoutButton></LogoutButton>
+      </div>
+      <div className="MainContent">
+        <div>
+          <h1>DASHBOARD</h1>
+          <SubirUnArchivo></SubirUnArchivo>
+          <LogoutButton></LogoutButton>
+        </div>
       </div>
     </div>
   );

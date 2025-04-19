@@ -53,6 +53,10 @@
 
 /* Estilos de hover de los botones del sidebar */
 
+.dashboardButton > button:hover{
+  transform: scale(1.01);
+}
+
 .dashboardButton > button:hover,
 .dashboardButton > button:hover > div {
   background-color: #fff;
@@ -71,9 +75,10 @@
 .dashboardButton > button,
 .dashboardButton > button > div,
 .dashboardButton > button > div:first-child {
-  transition:
+    transition:
     background-color 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    transform .2s ease;
 }
 
 /* Aplicar estilos de hover también cuando el botón está activo */
