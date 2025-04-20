@@ -9,7 +9,6 @@ export default function App() {
   useEffect(() => {
     if (isLoggedIn) {
       //aqui es donde podemos mandar informacion sobre el usario ya una vez esta loggeado
-      console.log("usuario loggeado");
       navigate("/dashboard");
     }
   }, [isLoggedIn, navigate]);

@@ -98,3 +98,9 @@ form {
   margin: 0;
   padding: 0;
 }
+
+/* error de msg del signin */
+.errorEnLogin{
+  color: red;
+  font-size: .6rem;
+}

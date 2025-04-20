@@ -9,6 +9,7 @@ import comentarioIcon from "../../public/images/sidebar/sms.svg";
 import "../Styles/Sidebar.css";
 
 import { useNavigate } from "react-router";
+import BotonLogout from "./BotonLogout";
 
 export default function Sidebar({ botonActivoAct }) {
   const navigate = useNavigate();
@@ -60,6 +61,7 @@ export default function Sidebar({ botonActivoAct }) {
           active={botonActivoAct === "Gestión de comentarios"}
           onClick={() => navergarPestana("gestionComentarios")}
         />
+        <BotonLogout></BotonLogout>
       </div>
     </div>
   );

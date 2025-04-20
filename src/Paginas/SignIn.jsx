@@ -1,46 +1,38 @@
 import GoogleButton from "../components/GoogleButton";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Input from "../components/Input";
 import Card from "../components/Card";
+import { AuthContext } from "../components/AuthContext";
 import "../Styles/SignIn.css";
 
 export default function SignIn({ onLogin }) {
+  const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const responseMessage = (response) => {
-    console.log(response);
-  };
-  const errorMessage = (error) => {
-    console.log(error);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const errorMsg = document.getElementById("loginError");
+    if (email && password) {
+      try {
+        const contraCorrecta = await login(email,password);
+        if (contraCorrecta == true) { 
+          onLogin();
+          localStorage.setItem("userName", email); 
+          localStorage.setItem("isLoggedIn", JSON.stringify(true));
+        } else {
+          //castigar al usuario ajajaj
+          errorMsg.textContent = " Credenciales Incorrectas "
+        }
+      } catch (err) {
+        console.error('Error en login (SingIn.jsx):', err);
+      }
+    } 
   };
 
   function handleGoogleLogin(e) {
     onLogin();
   }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (email && password) {
-
-      try {
-        const result = await login(username, password);
-      } catch (err) {
-        console.error('Error en login:', err);
-      }
-
-      onLogin();
-      localStorage.setItem("userName", getNombre(email)); //despues hay que actulizar este para que saque el nombre conforme al correo en la BDD
-      localStorage.setItem("isLoggedIn", JSON.stringify(true));
-    } else {
-      //alert("Completa todos los campos");
-    }
-  };
-
-  const getNombre = (email) => {
-    let nombre = email.split("@")[0];
-    return nombre.charAt(0).toUpperCase() + String(nombre).slice(1); //primera letra mayuscula
-  };
 
   return (
     <section className="signin">
@@ -59,6 +51,7 @@ export default function SignIn({ onLogin }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <p id="loginError" className="errorEnLogin"></p>
           <hr />
           <div className="div-botones-login">
             <div className="login-google btnOne">
