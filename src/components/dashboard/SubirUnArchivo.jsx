@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import uploadIcon from "../../../public/images/sidebar/upload.svg";
 import Input from "../Input";
 
@@ -10,11 +10,24 @@ export default function SubirUnArchivo() {
     return extensionesPermitidas.some((ext) => nombreArchivo.endsWith(ext));
   }
 
+  //si el archivo tiene existe, es csv o xlsx, usa el api de filereader y lo lee
+  //al cargar lo loggea a la consola, pero en si deberiamos pasarlo a otra funcion
+  //que lo seccione o lo suba a la base de datos, se lo atribuya a un usuario
+  //tambien abrir el menu para agregar las encuestas, etc...
+
   function handleFiles(files) {
     if (files.length > 0) {
       const archivo = files[0];
       if (validarExtension(archivo.name)) {
-        console.log(archivo);
+        if(archivo){
+            console.log("cargando archivo!")
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              const contenido = e.target.result;
+              console.log("Contenido del archivo:", contenido);
+            };
+            reader.readAsText(archivo);
+        }
         setArchivo(archivo);
       } else {
         console.log("Tipo de archivo no permitido. Solo .csv y .xlsx");
@@ -44,7 +57,7 @@ export default function SubirUnArchivo() {
 
   //useState para manejar animacion de cuando se esta arrastrando un archivo!
   const [animacion, setAnimacion] = useState(false);
-  
+
   return (
     <div className="subirArchivoContainer">
       <h2>Subir un archivo</h2>
