@@ -8,6 +8,7 @@ import SubirArchivo from "./Paginas/subirArchivo.jsx";
 import NuevoPerfil from "./Paginas/NuevoPerfil.jsx";
 import EncuestasActivas from "./Paginas/EncuestasActivas.jsx";
 import GestionComentarios from "./Paginas/GestionComentarios.jsx";
+import RutaPrivada from "./components/RutaPrivada.jsx";
 import "./Styles/index.css";
 
 createRoot(document.getElementById("root")).render(
@@ -16,13 +17,48 @@ createRoot(document.getElementById("root")).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/subirArchivo" element={<SubirArchivo />} />
-          <Route path="/nuevoPerfil" element={<NuevoPerfil />} />
-          <Route path="/encuestasActivas" element={<EncuestasActivas />} />
-          <Route path="/gestionComentarios" element={<GestionComentarios />} />
+          <Route
+            path="/dashboard"
+            element={
+              <RutaPrivada>
+                <Dashboard />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/subirArchivo"
+            element={
+              <RutaPrivada>
+                <SubirArchivo />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/nuevoPerfil"
+            element={
+              <RutaPrivada>
+                <NuevoPerfil />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/encuestasActivas"
+            element={
+              <RutaPrivada>
+                <EncuestasActivas />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/gestionComentarios"
+            element={
+              <RutaPrivada>
+                <GestionComentarios />
+              </RutaPrivada>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </StrictMode>
-  </GoogleOAuthProvider>,
+  </GoogleOAuthProvider>
 );
