@@ -19,12 +19,17 @@ export default function SignIn({ onLogin }) {
     onLogin();
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (email && password) {
+
+      try {
+        const result = await login(username, password);
+      } catch (err) {
+        console.error('Error en login:', err);
+      }
+
       onLogin();
-      //aqui es donde vamos a tener que implementar la verificacion hacia la base de datos si no es con google!
-      //por el momento estoy asumiendo que todo bn, sino no deberia de saltar a la linea de abajo
       localStorage.setItem("userName", getNombre(email)); //despues hay que actulizar este para que saque el nombre conforme al correo en la BDD
       localStorage.setItem("isLoggedIn", JSON.stringify(true));
     } else {
