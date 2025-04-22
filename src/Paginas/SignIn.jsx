@@ -7,15 +7,16 @@ import "../Styles/SignIn.css";
 
 export default function SignIn({ onLogin }) {
   const { login } = useContext(AuthContext);
+  const { googleLogin } = useContext(AuthContext);
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [name, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const errorMsg = document.getElementById("loginError");
-    if (email && password) {
+    if (email && name) {
       try {
-        const contraCorrecta = await login(email,password);
+        const contraCorrecta = await login(email,name);
         if (contraCorrecta == true) { 
           onLogin();
           localStorage.setItem("userName", email); 
@@ -30,8 +31,16 @@ export default function SignIn({ onLogin }) {
     } 
   };
 
-  function handleGoogleLogin(e) {
-    onLogin();
+  async function handleGoogleLogin(e) {
+    //destructurarlo del array del evento 
+    const {email, idToken, name} = e;
+    if (email && name && idToken) {
+      try {
+        console.log(await googleLogin(email, name, idToken));
+      } catch (err) {
+        console.error('Error en login (SingIn.jsx):', err);
+      }
+    } 
   }
 
   return (
@@ -48,7 +57,7 @@ export default function SignIn({ onLogin }) {
           <Input
             type="password"
             placeholder="Password"
-            value={password}
+            value={name}
             onChange={(e) => setPassword(e.target.value)}
           />
           <p id="loginError" className="errorEnLogin"></p>

@@ -30,7 +30,12 @@ export const AuthProvider = ({ children }) =>{
             console.error("Error en login:", err);
             return { success: false, error: err.message };
           }
-        };
+    };
+
+    const googleLogin = async (email, name, idToken) => {
+        console.log(email, name, idToken);
+        return true;
+    }
       
     const logout = () => {
         setUsuario(null);
@@ -38,7 +43,7 @@ export const AuthProvider = ({ children }) =>{
     };
         
     return (
-    <AuthContext.Provider value={{ usuario, login, logout }}>
+    <AuthContext.Provider value={{ usuario, login, googleLogin, logout }}>
         {children}
     </AuthContext.Provider>
     );

@@ -6,7 +6,6 @@ import axios from "axios";
 export default function GoogleButton({ onLogin }) {
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
-      console.log("Login Success:", tokenResponse);
 
       try {
         const res = await axios.get(
@@ -17,13 +16,11 @@ export default function GoogleButton({ onLogin }) {
             },
           },
         );
-
         const user = {
           name: res.data.name,
           email: res.data.email,
-          picture: res.data.picture,
+          idToken: tokenResponse.access_token,
         };
-        console.log(user);
 
         localStorage.setItem("userName", user.name);
         localStorage.setItem("isLoggedIn", JSON.stringify(true));
