@@ -1,47 +1,25 @@
-import GoogleButton from "../components/GoogleButton";
-import { useState, useContext } from "react";
 import Input from "../components/Input";
 import Card from "../components/Card";
+import { useState, useContext } from "react";
 import { AuthContext } from "../components/AuthContext";
 import "../Styles/SignIn.css";
 
 export default function SignIn({ onLogin }) {
   const { login } = useContext(AuthContext);
-  const { googleLogin } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [name, setPassword] = useState("");
+  const [rol, setRol] = useState("Profesor");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const errorMsg = document.getElementById("loginError");
-    if (email && name) {
-      try {
-        const contraCorrecta = await login(email,name);
-        if (contraCorrecta == true) { 
-          onLogin();
-          localStorage.setItem("userName", email); 
-          localStorage.setItem("isLoggedIn", JSON.stringify(true));
-        } else {
-          //castigar al usuario ajajaj
-          errorMsg.textContent = " Credenciales Incorrectas "
-        }
-      } catch (err) {
-        console.error('Error en login (SingIn.jsx):', err);
-      }
-    } 
+    e.preventDefault()
+    console.log("Tratando de iniciar sesion con las credenciales", name, email, rol);
+    try {
+      login(name,email,rol);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  async function handleGoogleLogin(e) {
-    //destructurarlo del array del evento 
-    const {email, idToken, name} = e;
-    if (email && name && idToken) {
-      try {
-        console.log(await googleLogin(email, name, idToken));
-      } catch (err) {
-        console.error('Error en login (SingIn.jsx):', err);
-      }
-    } 
-  }
 
   return (
     <section className="signin">
@@ -64,8 +42,12 @@ export default function SignIn({ onLogin }) {
           <hr />
           <div className="div-botones-login">
             <div className="login-google btnOne">
-              <p className="subtituloUno">Iniciar sesión con</p>
-              <GoogleButton onLogin={handleGoogleLogin} />
+              <label className="subtituloUno" htmlFor="roles">Iniciar sesión como</label>
+              <select name="roles" id="roles" value={rol} onChange={(e) => setRol(e.target.value)} >
+                <option value="Profesor">Profesor</option>
+                <option value="Coordinador">Coordinador</option>
+                <option value="Admin">Admin</option>
+              </select>
             </div>
             <div className="login-normal btnOne">
               <button type="submit">Log in</button>

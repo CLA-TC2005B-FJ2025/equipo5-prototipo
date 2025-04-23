@@ -95,3 +95,10 @@ hr {
   width: 100%;
   background: linear-gradient(to right, transparent, #818078, transparent);
 }
+
+.subtituloUno{
+  padding: 0;
+  margin: 0;
+  font-size: .85rem;
+  color: var(--text-dark);
+}

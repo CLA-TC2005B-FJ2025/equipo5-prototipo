@@ -8,34 +8,13 @@ export const AuthProvider = ({ children }) =>{
     
     //hacer el fetch a la base de datos
     const login = async (email, password) =>{
-        try {
-            const response = await fetch('https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/login', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-                credentials: 'include',  
-            });
-
-            if(response.ok){
-                const contraCorrecta = await response.json();
-                if(!contraCorrecta){
-                    throw new Error("Credenciales inválidas");
-                }
-                return true;
-            } 
-      
-          } catch (err) {
-            console.error("Error en login:", err);
-            return { success: false, error: err.message };
-          }
+        console.log("tratando de iniciar sesion como ")
     };
 
-    const googleLogin = async (email, name, idToken) => {
-        console.log(email, name, idToken);
-        return true;
-    }
+    // const googleLogin = async (email, name, idToken) => {
+    //     console.log(email, name, idToken);
+    //     return true;
+    // }
       
     const logout = () => {
         setUsuario(null);
@@ -43,8 +22,9 @@ export const AuthProvider = ({ children }) =>{
     };
         
     return (
-    <AuthContext.Provider value={{ usuario, login, googleLogin, logout }}>
+    <AuthContext.Provider value={{ usuario, login, /*googleLogin, */ logout }}>
         {children}
     </AuthContext.Provider>
     );
 }
+
