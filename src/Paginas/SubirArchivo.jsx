@@ -1,7 +1,6 @@
 import Sidebar from "../components/Sidebar";
 
 export default function subirArchivo() {
-
   return (
     <div className="MainPageLayout">
       <div className="Sidebar">

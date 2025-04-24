@@ -96,9 +96,9 @@ hr {
   background: linear-gradient(to right, transparent, #818078, transparent);
 }
 
-.subtituloUno{
+.subtituloUno {
   padding: 0;
   margin: 0;
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: var(--text-dark);
 }

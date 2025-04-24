@@ -12,53 +12,53 @@ import { AuthProvider } from "./components/AuthContext.jsx";
 import "./Styles/index.css";
 
 createRoot(document.getElementById("root")).render(
-    <StrictMode>
-      <BrowserRouter>
-        <AuthProvider>
-          <Routes>
-            <Route path="/" element={<App />} />
-            <Route
-              path="/dashboard"
-              element={
-                <RutaPrivada>
-                  <Dashboard />
-                </RutaPrivada>
-              }
-            />
-            <Route
-              path="/subirArchivo"
-              element={
-                <RutaPrivada>
-                  <SubirArchivo />
-                </RutaPrivada>
-              }
-            />
-            <Route
-              path="/nuevoPerfil"
-              element={
-                <RutaPrivada>
-                  <NuevoPerfil />
-                </RutaPrivada>
-              }
-            />
-            <Route
-              path="/encuestasActivas"
-              element={
-                <RutaPrivada>
-                  <EncuestasActivas />
-                </RutaPrivada>
-              }
-            />
-            <Route
-              path="/gestionComentarios"
-              element={
-                <RutaPrivada>
-                  <GestionComentarios />
-                </RutaPrivada>
-              }
-            />
-          </Routes>
-        </AuthProvider>
-      </BrowserRouter>
-    </StrictMode>
+  <StrictMode>
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route
+            path="/dashboard"
+            element={
+              <RutaPrivada>
+                <Dashboard />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/subirArchivo"
+            element={
+              <RutaPrivada>
+                <SubirArchivo />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/nuevoPerfil"
+            element={
+              <RutaPrivada>
+                <NuevoPerfil />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/encuestasActivas"
+            element={
+              <RutaPrivada>
+                <EncuestasActivas />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/gestionComentarios"
+            element={
+              <RutaPrivada>
+                <GestionComentarios />
+              </RutaPrivada>
+            }
+          />
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
+  </StrictMode>,
 );

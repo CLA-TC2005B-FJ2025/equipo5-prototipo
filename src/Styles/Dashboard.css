@@ -92,14 +92,14 @@ input[type="file"] {
   border-radius: 0.5rem;
 }
 
-.botonSubirArchivo:hover{
-  opacity: .9;
+.botonSubirArchivo:hover {
+  opacity: 0.9;
 }
-.botonSubirArchivo:active{
-  opacity: .8;
+.botonSubirArchivo:active {
+  opacity: 0.8;
 }
 
 /* clase para animar cuando se esta soltando un archivo */
-.activo{
+.activo {
   background-color: var(--button-grey);
 }

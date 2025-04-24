@@ -7,19 +7,18 @@ import "../Styles/SignIn.css";
 export default function SignIn({ onLogin }) {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
-  const [name, setPassword] = useState("");
-  const [rol, setRol] = useState("Profesor");
+  const [password, setPassword] = useState("");
+  const [rol, setRol] = useState("3");
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log("Tratando de iniciar sesion con las credenciales", name, email, rol);
+    e.preventDefault();
     try {
-      login(name,email,rol);
+      login();
+      console.log(email, password, rol);
     } catch (err) {
       console.error(err);
     }
   };
-
 
   return (
     <section className="signin">
@@ -35,18 +34,25 @@ export default function SignIn({ onLogin }) {
           <Input
             type="password"
             placeholder="Password"
-            value={name}
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <p id="loginError" className="errorEnLogin"></p>
           <hr />
           <div className="div-botones-login">
             <div className="login-google btnOne">
-              <label className="subtituloUno" htmlFor="roles">Iniciar sesión como</label>
-              <select name="roles" id="roles" value={rol} onChange={(e) => setRol(e.target.value)} >
-                <option value="Profesor">Profesor</option>
-                <option value="Coordinador">Coordinador</option>
-                <option value="Admin">Admin</option>
+              <label className="subtituloUno" htmlFor="roles">
+                Iniciar sesión como
+              </label>
+              <select
+                name="roles"
+                id="roles"
+                value={rol}
+                onChange={(e) => setRol(e.target.value)}
+              >
+                <option value={3}>Profesor</option>
+                <option value={2}>Coordinador</option>
+                <option value={1}>Admin</option>
               </select>
             </div>
             <div className="login-normal btnOne">

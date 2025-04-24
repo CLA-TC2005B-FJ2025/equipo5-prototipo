@@ -2,7 +2,7 @@ import notificacion from "../../public/images/navbar/notificacion.svg";
 import settings from "../../public/images/navbar/settings.svg";
 import user from "../../public/images/navbar/user.svg";
 import BotonConImg from "./BotonConImg";
-import "../Styles/Navbar.css";  
+import "../Styles/Navbar.css";
 
 export default function NavBar({ Usuario }) {
   return (

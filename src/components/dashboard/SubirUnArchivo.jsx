@@ -19,14 +19,14 @@ export default function SubirUnArchivo() {
     if (files.length > 0) {
       const archivo = files[0];
       if (validarExtension(archivo.name)) {
-        if(archivo){
-            console.log("cargando archivo!")
-            const reader = new FileReader();
-            reader.onload = (e) => {
-              const contenido = e.target.result;
-              console.log("Contenido del archivo:", contenido);
-            };
-            reader.readAsText(archivo);
+        if (archivo) {
+          console.log("cargando archivo!");
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const contenido = e.target.result;
+            console.log("Contenido del archivo:", contenido);
+          };
+          reader.readAsText(archivo);
         }
         setArchivo(archivo);
       } else {
