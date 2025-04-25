@@ -1,4 +1,4 @@
-import highpointLogo from "../../public/images/highpointLogo.png";
+import highpointLogo from "../../public/images/general/highpointLogo.png";
 import SidebarButton from "./SidebarButton";
 
 import dashboardIcon from "../../public/images/sidebar/dashboard.svg";

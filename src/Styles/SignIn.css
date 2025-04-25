@@ -7,7 +7,7 @@
   align-items: center;
   background:
     linear-gradient(rgba(0, 72, 255, 0.357), rgba(0, 72, 255, 0.539)),
-    url("/images/ImagenSignIn.jpg") no-repeat center center;
+    url("/images/general/ImagenSignIn.jpg") no-repeat center center;
   background-size: cover;
 }
 

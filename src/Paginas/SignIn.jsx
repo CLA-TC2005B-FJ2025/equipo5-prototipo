@@ -12,11 +12,23 @@ export default function SignIn({ onLogin }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      login(email,password,rol);
-    } catch (err) {
-      console.error(err);
-    }
+    const errorMsg = document.getElementById("loginError");
+    if (email && password && rol) {
+      try {
+        const contraCorrecta = await login(email,password,rol);
+        if (contraCorrecta == true) { 
+          onLogin();
+          localStorage.setItem("userName", email); 
+          localStorage.setItem("isLoggedIn", JSON.stringify(true));
+          localStorage.setItem("rol",rol);
+        } else {
+          //castigar al usuario ajajaj
+          errorMsg.textContent = " Credenciales Incorrectas "
+        }
+      } catch (err) {
+        console.error('Error en login (SingIn.jsx):', err);
+      }
+    } 
   };
 
   return (
