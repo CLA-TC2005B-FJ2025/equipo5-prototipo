@@ -13,8 +13,7 @@ export default function SignIn({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      login();
-      console.log(email, password, rol);
+      login(email,password,rol);
     } catch (err) {
       console.error(err);
     }

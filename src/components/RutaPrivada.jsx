@@ -6,7 +6,6 @@ const RutaPrivada = ({ children }) => {
 
   const isLogged = JSON.parse(localStorage.getItem("isLoggedIn"));
   return isLogged ? children : <Navigate to="/" />;
-  // return <Navigate to="/" />;//borrar
 };
 
 export default RutaPrivada;
