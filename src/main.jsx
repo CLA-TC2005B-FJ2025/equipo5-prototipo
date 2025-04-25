@@ -1,6 +1,6 @@
 import App from "./App.jsx";
 import Dashboard from "./Paginas/Dashboard.jsx";
-import SubirArchivo from "./Paginas/subirArchivo.jsx";
+import SubirArchivo from "./Paginas/SubirArchivo.jsx"
 import NuevoPerfil from "./Paginas/NuevoPerfil.jsx";
 import EncuestasActivas from "./Paginas/EncuestasActivas.jsx";
 import GestionComentarios from "./Paginas/GestionComentarios.jsx";
