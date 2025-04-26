@@ -52,9 +52,9 @@ createRoot(document.getElementById("root")).render(
             <Route
               path="/gestionComentarios"
               element={
-                <RutaPrivada>
+                //<RutaPrivada>
                   <GestionComentarios />
-                </RutaPrivada>
+                //</RutaPrivada>
               }
             />
           </Routes>
