@@ -6,6 +6,8 @@ import "../Styles/NuevoPerfil.css";
 export default function NuevoPerfil() {
   const [form, setForm] = useState({
     nombre: "",
+    apellidop: "",
+    apellidom: "",
     correo: "",
     tipoUsuario: "",
     departamento: "",
@@ -16,7 +18,7 @@ export default function NuevoPerfil() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { nombre, correo, tipoUsuario, departamento } = form;
@@ -26,7 +28,22 @@ export default function NuevoPerfil() {
     }
 
     console.log("Perfil nuevo:", form);
-    // Aquí iría la lógica para mandar los datos al backend
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/usuario`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ nombre, apellidop, apellidom, correo, rol, departamento }),
+      });
+      if (response.ok) {
+        console.log(response)
+      }
+    } catch (err) {
+      console.error("Error en login:", err);
+      return { success: false, error: err.message };
+    }
+
   };
 
   return (
@@ -58,29 +75,32 @@ export default function NuevoPerfil() {
               />
             </div>
 
-            <div className="input-group">
-              <label htmlFor="apellidoP">Apellido Paterno</label>
-              <input
-                id="nombre"
-                type="text"
-                name="nombre"
-                value={form.nombre}
-                onChange={handleChange}
-                required
-              />
-            </div>
+            <div className="apellidos">
+              <div className="input-group">
+                <label htmlFor="apellidop">Apellido Paterno</label>
+                <input
+                  id="apellidop"
+                  type="text"
+                  name="apellidop"
+                  value={form.apellidop}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
-            <label htmlFor="apellidoM">Apellido Materno</label>
-            <div>
-              <input
-                id="nombre"
-                type="text"
-                name="nombre"
-                value={form.nombre}
-                onChange={handleChange}
-                required
-              />
+              <div className="input-group">
+                <label htmlFor="apellidom">Apellido Materno</label>
+                <input
+                  id="apellidom"
+                  type="text"
+                  name="apellidom"
+                  value={form.apellidom}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
             </div>
+            
 
             <div className="input-group">
               <label htmlFor="correo">Correo Institucional</label>
@@ -106,7 +126,6 @@ export default function NuevoPerfil() {
                 <option value="">Selecciona una opción</option>
                 <option value="Profesor">Profesor</option>
                 <option value="Coordinador">Coordinador</option>
-                <option value="Director">Director</option>
                 <option value="Admin">Admin</option>
               </select>
             </div>

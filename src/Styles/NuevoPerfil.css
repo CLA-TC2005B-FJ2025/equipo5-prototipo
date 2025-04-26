@@ -51,3 +51,8 @@
   font-weight: 500;
   color: var(--text-dark-two);
 }
+
+.apellidos{
+  display: flex;
+  gap: 1rem;
+}
