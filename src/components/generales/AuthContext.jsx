@@ -8,7 +8,9 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password, rol) =>{
     console.log("here")
     try {
-        const response = await fetch('https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/login', {
+      console.log(process.env.REACT_APP_API_URL)
+      console.log("asdasdasd")
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -21,7 +23,7 @@ export const AuthProvider = ({ children }) => {
             if(!contraCorrecta){
                 throw new Error("Aqui algo fallo");
             }
-            return true;
+            return true;q
         } 
   
       } catch (err) {

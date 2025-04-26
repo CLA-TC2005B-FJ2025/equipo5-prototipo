@@ -1,9 +1,9 @@
 import App from "./App.jsx";
 import Dashboard from "./Paginas/Dashboard.jsx";
-import SubirArchivo from "./Paginas/SubirArchivo.jsx"
-import NuevoPerfil from "./Paginas/NuevoPerfil.jsx";
-import EncuestasActivas from "./Paginas/EncuestasActivas.jsx";
-import GestionComentarios from "./Paginas/GestionComentarios.jsx";
+import SubirArchivo from "./Paginas/SubirArchivo.jsx";
+import NuevoPerfil from "./Paginas/nuevoPerfil.jsx";
+import EncuestasActivas from "./Paginas/encuestasActivas.jsx";
+import GestionComentarios from "./Paginas/gestionComentarios.jsx";
 import RutaPrivada from "./components/RutaPrivada.jsx";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { StrictMode } from "react";

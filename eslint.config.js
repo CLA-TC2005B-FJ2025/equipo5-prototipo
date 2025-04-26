@@ -1,5 +1,5 @@
 import js from "@eslint/js";
-import globals from "globals";
+import globals, { node } from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 
@@ -21,6 +21,7 @@ export default [
       "react-refresh": reactRefresh,
     },
     rules: {
+      "node": true,
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
