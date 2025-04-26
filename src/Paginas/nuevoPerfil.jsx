@@ -1,14 +1,115 @@
 import Sidebar from "../components/Sidebar";
+import NavBar from "../components/NavBar";
+import { useState } from "react";
+import "../Styles/NuevoPerfil.css";
 
 export default function NuevoPerfil() {
+  const [form, setForm] = useState({
+    nombre: "",
+    correo: "",
+    tipoUsuario: "",
+    departamento: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    const { nombre, correo, tipoUsuario, departamento } = form;
+    if (!nombre || !correo || !tipoUsuario || !departamento) {
+      alert("Por favor, completa todos los campos antes de continuar.");
+      return;
+    }
+  
+    console.log("Perfil nuevo:", form);
+    // Aquí iría la lógica para mandar los datos al backend
+  };
 
   return (
     <div className="MainPageLayout">
       <div className="Sidebar">
-        <Sidebar botonActivoAct={"Nuevo Perfil"}></Sidebar>
+        <Sidebar botonActivoAct={"Nuevo Perfil"} />
       </div>
-      <div className="MainContent">
-        <h1>NUEVO PERFIL</h1>
+
+      <div className="Navbar">
+        <NavBar Usuario={localStorage.getItem("userName")} />
+      </div>
+
+      <div className="MainContent nuevo-perfil-container">
+        <div className="form-box">
+          <div className="form-header">
+            <h2>Crea un perfil nuevo</h2>
+          </div>
+
+          <form onSubmit={handleSubmit}>
+            <div className="input-group">
+              <label htmlFor="nombre">Nombre Completo</label>
+              <input
+                id="nombre"
+                type="text"
+                name="nombre"
+                value={form.nombre}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="input-group">
+              <label htmlFor="correo">Correo Institucional</label>
+              <input
+                id="correo"
+                type="email"
+                name="correo"
+                value={form.correo}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="input-group">
+              <label htmlFor="tipoUsuario">Tipo de usuario</label>
+              <select
+                id="tipoUsuario"
+                name="tipoUsuario"
+                value={form.tipoUsuario}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Selecciona una opción</option>
+                <option value="Profesor">Profesor</option>
+                <option value="Coordinador">Coordinador</option>
+                <option value="Director">Director</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </div>
+
+            <div className="input-group">
+              <label htmlFor="departamento">Departamento</label>
+              <select
+                id="departamento"
+                name="departamento"
+                value={form.departamento}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Selecciona un departamento</option>
+                <option value="Académico">Académico</option>
+                <option value="Deportivo">Deportivo</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Laboratorista">Laboratorista</option>
+                <option value="Tutores">Tutores</option>
+              </select>
+            </div>
+
+            <button type="submit" className="submit-btn">
+              Crear perfil
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
