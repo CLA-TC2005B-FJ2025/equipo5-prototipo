@@ -16,7 +16,6 @@
 
 .MainContent > div {
   min-height: 270px;
-  border: solid 1px red;
   border-radius: 15px;
 }
 

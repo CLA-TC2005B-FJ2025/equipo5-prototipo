@@ -54,6 +54,8 @@ select {
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
+  color: var(--text-dark-two);
+  background-color: var(--background-light) !important;
 }
 
 input:focus,
@@ -101,4 +103,14 @@ hr {
   margin: 0;
   font-size: 0.85rem;
   color: var(--text-dark);
+}
+
+form select {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #f4f4f4;
+  appearance: none;
 }

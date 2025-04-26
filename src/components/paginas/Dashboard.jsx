@@ -1,4 +1,4 @@
-import AdminDashboard from "./dashboards/adminDashboard.jsx"
+import AdminDashboard from "./dashboards/adminDashboard.jsx";
 
 export default function Dashboard() {
   const rol = localStorage.getItem("rol");
@@ -8,5 +8,4 @@ export default function Dashboard() {
   if (rol === "3") return <h1>ROL 3</h1>;
 
   return <div>Rol no reconocido</div>;
-};
-
+}

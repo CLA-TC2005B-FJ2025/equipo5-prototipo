@@ -18,13 +18,13 @@ export default function NuevoPerfil() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     const { nombre, correo, tipoUsuario, departamento } = form;
     if (!nombre || !correo || !tipoUsuario || !departamento) {
       alert("Por favor, completa todos los campos antes de continuar.");
       return;
     }
-  
+
     console.log("Perfil nuevo:", form);
     // Aquí iría la lógica para mandar los datos al backend
   };

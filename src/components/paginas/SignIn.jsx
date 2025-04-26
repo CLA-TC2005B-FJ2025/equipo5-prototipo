@@ -15,20 +15,20 @@ export default function SignIn({ onLogin }) {
     const errorMsg = document.getElementById("loginError");
     if (email && password && rol) {
       try {
-        const contraCorrecta = await login(email,password,rol);
-        if (contraCorrecta == true) { 
+        const contraCorrecta = await login(email, password, rol);
+        if (contraCorrecta == true) {
           onLogin();
-          localStorage.setItem("userName", email); 
+          localStorage.setItem("userName", email);
           localStorage.setItem("isLoggedIn", JSON.stringify(true));
-          localStorage.setItem("rol",rol);
+          localStorage.setItem("rol", rol);
         } else {
           //castigar al usuario ajajaj
-          errorMsg.textContent = " Credenciales Incorrectas "
+          errorMsg.textContent = " Credenciales Incorrectas ";
         }
       } catch (err) {
-        console.error('Error en login (SingIn.jsx):', err);
+        console.error("Error en login (SingIn.jsx):", err);
       }
-    } 
+    }
   };
 
   return (

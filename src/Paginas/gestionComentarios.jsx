@@ -3,7 +3,6 @@ import NavBar from "../components/NavBar";
 import { useState } from "react";
 import "../Styles/GestionComentario.css";
 
-
 //son datos inventados nomas para simular los que vendrian
 const materias = [
   {
