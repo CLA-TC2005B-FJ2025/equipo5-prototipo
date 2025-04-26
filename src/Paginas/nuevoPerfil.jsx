@@ -47,7 +47,31 @@ export default function NuevoPerfil() {
 
           <form onSubmit={handleSubmit}>
             <div className="input-group">
-              <label htmlFor="nombre">Nombre Completo</label>
+              <label htmlFor="nombre">Nombre</label>
+              <input
+                id="nombre"
+                type="text"
+                name="nombre"
+                value={form.nombre}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="input-group">
+              <label htmlFor="apellidoP">Apellido Paterno</label>
+              <input
+                id="nombre"
+                type="text"
+                name="nombre"
+                value={form.nombre}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <label htmlFor="apellidoM">Apellido Materno</label>
+            <div>
               <input
                 id="nombre"
                 type="text"
