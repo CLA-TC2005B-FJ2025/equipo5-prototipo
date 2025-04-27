@@ -20,8 +20,8 @@ export default function EncuestasActivas() {
           <div className="encuestas-main-content">
             <h1 className="encuestas-header">Encuestas Activas</h1>
             <div className="encuestas-info-bar">
-              <span>27 ECOA's encontradas (2 filtros aplicados)</span>
-              <span>278 respuestas totales</span>
+              <span>2 ECOA's encontradas (0 filtros aplicados)</span>
+              <span>65 respuestas totales</span>
             </div>
             <div className="encuestas-list">
               <table>
@@ -37,14 +37,14 @@ export default function EncuestasActivas() {
                 <tbody>
                   <tr>
                     <td>Construcción de software y toma de decisiones</td>
-                    <td>Eliel Mejía</td>
+                    <td>Eliel Mejia</td>
                     <td>400</td>
                     <td>32</td>
                     <td><a href="#">Ver datos</a></td>
                   </tr>
                   <tr>
                     <td>Implementacion de metodos computacionales</td>
-                    <td>Eliel Mejía</td>
+                    <td>Eliel Mejia</td>
                     <td>401</td>
                     <td>33</td>
                     <td><a href="#">Ver datos</a></td>
