@@ -50,7 +50,6 @@ body {
   grid-area: MainContent;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 2rem;
 }
 
 .pointer {
