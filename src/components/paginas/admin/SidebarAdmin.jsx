@@ -1,4 +1,3 @@
-
 import SidebarButton from "../../generales/SidebarButton";
 import "../../../Styles/Sidebar.css";
 
@@ -16,11 +15,15 @@ export default function Sidebar({ botonActivoAct }) {
   return (
     <div>
       <div>
-      <img src="/images/general/highpointLogo.png" width={200} alt="logo highpoint" />
+        <img
+          src="/images/general/highpointLogo.png"
+          width={200}
+          alt="logo highpoint"
+        />
       </div>
       <hr />
       <div className="contenedorBotones">
-         <SidebarButton
+        <SidebarButton
           imgSrc="/images/sidebar/dashboard.svg"
           content="Dashboard"
           classN="dashboardButton"

@@ -15,7 +15,7 @@ export default function Sidebar({ botonActivoAct }) {
   const navigate = useNavigate();
 
   function navergarPestana(e) {
-    console.log("navegando a", e )
+    console.log("navegando a", e);
     navigate(`/${e}`);
   }
 

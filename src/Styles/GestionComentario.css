@@ -1,81 +1,81 @@
 .gestion-comentarios-content {
-    padding: 0.5rem;
-  }
-  
-  .gestion-box {
-    background: white;
-    padding: 2rem;
-    border-radius: 20px;
-    margin-top: 1.5rem;
-    height: 450px;
-    width: 1400%;
-    overflow-y: auto;
-    border: 1px solid transparent !important;
-    outline: none !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-  }
-  
-  .header-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .header-bar h3 {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  
-  .docente-select {
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    background-color: #f4f4f4;
-  }
-  
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 1.2rem;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-    font-size: 0.9rem;
-  }
-  
-  .card h4 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .ver-link {
-    color: #1e3eff;
-    font-weight: bold;
-    font-size: 0.85rem;
-    text-decoration: none;
-  }
-  
-  .ver-link:hover {
-    text-decoration: underline;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 1.2rem;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-    font-size: 0.9rem;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-  }
+  padding: 0.5rem;
+}
+
+.gestion-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+  height: 450px;
+  width: 1400%;
+  overflow-y: auto;
+  border: 1px solid transparent !important;
+  outline: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-bar h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.docente-select {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f4f4f4;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+}
+
+.card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.ver-link {
+  color: #1e3eff;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.ver-link:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}

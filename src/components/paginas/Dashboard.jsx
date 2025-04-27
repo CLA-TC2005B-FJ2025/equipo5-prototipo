@@ -8,5 +8,4 @@ export default function Dashboard() {
   if (rol === "3") return <h1>ROL 3</h1>;
 
   return <div>Rol no reconocido</div>;
-};
-
+}

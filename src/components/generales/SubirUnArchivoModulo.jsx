@@ -69,9 +69,9 @@ export default function SubirUnArchivo() {
         tabIndex="0"
       >
         <img
-         className="uploadIcon"
-         src="/images/sidebar/upload.svg"
-         alt="icono de subir archivo"
+          className="uploadIcon"
+          src="/images/sidebar/upload.svg"
+          alt="icono de subir archivo"
         />
 
         <p>

@@ -5,13 +5,15 @@
 
 /* Layour del dashboard */
 .MainContent {
+  border: solid 1px red;
   display: grid;
   grid-template-columns: repeat(30, 1fr);
   grid-template-rows: 55px repeat(2, 1fr);
   grid-column-gap: 12px;
   grid-row-gap: 12px;
-  width: 93%;
-  height: 70%;
+  justify-content: center;
+  max-height: 80%;
+  max-width: 1350px;
 }
 
 .MainContent > div {
@@ -26,18 +28,23 @@
 }
 .div2 {
   grid-area: 2 / 8 / 3 / 22;
+  border: solid 2px blue !important;
 }
 .div3 {
   grid-area: 2 / 22 / 3 / 30;
+  border: solid 2px blue !important;
 }
 .div4 {
   grid-area: 3 / 1 / 4 / 12;
+  border: solid 2px blue !important;
 }
 .div5 {
   grid-area: 3 / 12 / 4 / 23;
+  border: solid 2px blue !important;
 }
 .div6 {
   grid-area: 3 / 23 / 4 / 30;
+  border: solid 2px blue !important;
 }
 
 /* Aqui vamos a poner los estilos de los componentes del dashboard tmb */
@@ -61,6 +68,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.4rem;
 }
 
@@ -75,7 +83,6 @@
   width: 75px;
   height: 75px;
   align-self: center;
-  padding-top: 1rem;
 }
 
 input[type="file"] {
@@ -101,4 +108,80 @@ input[type="file"] {
 /* clase para animar cuando se esta soltando un archivo */
 .activo {
   background-color: var(--button-grey);
+}
+
+
+/* Modulo 1 - info de las ecoas */
+.frame {
+  min-width: 240px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  background-color: var(--form-bg);
+  border-radius: 15px;
+}
+
+.semiCirculo {
+  position: absolute;
+  top: 30px;
+  width: 75%;
+  aspect-ratio: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: linear-gradient(var(--primary-hover-color) 60%, #000b2f);
+  transform: translateX(17%) rotate(240deg);
+  mask:
+    linear-gradient(#00000000 0 0) content-box intersect,
+    conic-gradient(#000 240deg, #0000 0);
+  z-index: 1; 
+}
+
+.contenidoEncima {
+  position: relative;
+  z-index: 2; 
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.contenidoEncima > h1 {
+  height: 55%;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.mainText{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.subUno{
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.ecoaListBtn{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+}
+
+.ecoaListBtn > button {
+  background-color: var(--button-grey);
+  height: 30px;
+  padding: 0;
+  font-weight: bold;
+  color: var(--text-dark-two);
+  width: 50%;
 }
