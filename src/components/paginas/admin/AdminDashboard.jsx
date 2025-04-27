@@ -1,6 +1,6 @@
-import Sidebar from "../../SidebarAdmin";
-import SubirUnArchivo from "./SubirUnArchivo";
-import NavBar from "../../NavBar";
+import Sidebar from "./SidebarAdmin";
+import SubirUnArchivo from "./SubirArchivos/SubirUnArchivo";
+import NavBar from "../../generales/NavBar";
 import "../../Styles/Dashboard.css";
 
 export default function Dashboard(){

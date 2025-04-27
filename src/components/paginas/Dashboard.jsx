@@ -1,4 +1,4 @@
-import AdminDashboard from "./dashboards/adminDashboard.jsx"
+import AdminDashboard from "./admin/AdminDashboard.jsx";
 
 export default function Dashboard() {
   const rol = localStorage.getItem("rol");
