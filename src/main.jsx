@@ -21,7 +21,7 @@ createRoot(document.getElementById("root")).render(
             path="/dashboard"
             element={
               //<RutaPrivada>
-                <Dashboard />
+              <Dashboard />
               //</RutaPrivada>
             }
           />
@@ -37,7 +37,7 @@ createRoot(document.getElementById("root")).render(
             path="/nuevoPerfil"
             element={
               //<RutaPrivada>
-                <NuevoPerfil />
+              <NuevoPerfil />
               //</RutaPrivada>
             }
           />
@@ -45,7 +45,7 @@ createRoot(document.getElementById("root")).render(
             path="/encuestasActivas"
             element={
               //<RutaPrivada>
-                <EncuestasActivas />
+              <EncuestasActivas />
               //</RutaPrivada>
             }
           />

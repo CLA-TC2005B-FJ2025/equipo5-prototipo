@@ -23,13 +23,12 @@ body {
   color: var(--text-dark);
 }
 
-
 .MainPageLayout {
   height: 120vh;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 100px 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "Sidebar Navbar"
     "Sidebar MainContent";
 }

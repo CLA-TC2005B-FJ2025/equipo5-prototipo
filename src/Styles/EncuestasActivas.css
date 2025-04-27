@@ -5,7 +5,7 @@
 }
 
 .encuestas-main-content {
-  flex: 2.5; 
+  flex: 2.5;
   max-width: 650px;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,6 @@
 .encuestas-header {
   font-size: 2rem;
   font-weight: bold;
-  
 }
 
 .encuestas-info-bar {
@@ -37,14 +36,13 @@
   max-width: 650px;
   border-collapse: collapse;
 }
- 
+
 .encuestas-list th,
 .encuestas-list td {
   padding: 1rem;
   text-align: left;
-  border-bottom: 1px solid #ccc;  
+  border-bottom: 1px solid #ccc;
 }
-
 
 .encuestas-list th {
   background-color: var(--background-light);
@@ -64,7 +62,7 @@
 }
 
 .encuestas-filtros {
-  flex: 1; 
+  flex: 1;
   background: white;
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-card);

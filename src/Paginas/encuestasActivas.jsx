@@ -40,14 +40,18 @@ export default function EncuestasActivas() {
                     <td>Eliel Mejia</td>
                     <td>400</td>
                     <td>32</td>
-                    <td><a href="#">Ver datos</a></td>
+                    <td>
+                      <a href="#">Ver datos</a>
+                    </td>
                   </tr>
                   <tr>
                     <td>Implementacion de metodos computacionales</td>
                     <td>Eliel Mejia</td>
                     <td>401</td>
                     <td>33</td>
-                    <td><a href="#">Ver datos</a></td>
+                    <td>
+                      <a href="#">Ver datos</a>
+                    </td>
                   </tr>
                   {/* Más filas */}
                 </tbody>
@@ -60,12 +64,12 @@ export default function EncuestasActivas() {
 
             <div>
               <label>Profesor</label>
-              <input type="text"/>
+              <input type="text" />
             </div>
 
             <div>
               <label>Grupo</label>
-              <input type="text"/>
+              <input type="text" />
             </div>
 
             <div>
@@ -92,7 +96,6 @@ export default function EncuestasActivas() {
 
             <button>Filtrar</button>
           </div>
-
         </div>
       </div>
     </div>
