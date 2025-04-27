@@ -6,7 +6,6 @@ export const AuthProvider = ({ children }) => {
 
   //hacer el fetch a la base de datos
   const login = async (email, password, rol) => {
-    console.log("here");
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
         method: "POST",

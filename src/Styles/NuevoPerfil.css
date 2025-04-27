@@ -52,7 +52,12 @@
   color: var(--text-dark-two);
 }
 
-.apellidos{
+.apellidos {
   display: flex;
   gap: 1rem;
+}
+
+.crearPerfilMSG {
+  color: var(--primary-hovr-color) !important;
+  text-align: center;
 }
