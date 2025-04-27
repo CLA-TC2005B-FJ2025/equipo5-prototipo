@@ -1,12 +1,12 @@
-import highpointLogo from "../../public/images/general/highpointLogo.png";
+import highpointLogo from "../../../public/images/general/highpointLogo.png";
 import SidebarButton from "./SidebarButton";
 
-import dashboardIcon from "../../public/images/sidebar/dashboard.svg";
-import subirArchivoIcon from "../../public/images/sidebar/upload.svg";
-import nuevoPerfilIcon from "../../public/images/sidebar/person.svg";
-import encuestaIcon from "../../public/images/sidebar/tabla.svg";
-import comentarioIcon from "../../public/images/sidebar/sms.svg";
-import "../Styles/Sidebar.css";
+import dashboardIcon from "../../../public/images/sidebar/dashboard.svg";
+import subirArchivoIcon from "../../../public/images/sidebar/upload.svg";
+import nuevoPerfilIcon from "../../../public/images/sidebar/person.svg";
+import encuestaIcon from "../../../public/images/sidebar/tabla.svg";
+import comentarioIcon from "../../../public/images/sidebar/sms.svg";
+import "../../Styles/Sidebar.css";
 
 import { useNavigate } from "react-router";
 import BotonLogout from "./BotonLogout";
@@ -15,7 +15,7 @@ export default function Sidebar({ botonActivoAct }) {
   const navigate = useNavigate();
 
   function navergarPestana(e) {
-    // console.log("navegando a", e )
+    console.log("navegando a", e )
     navigate(`/${e}`);
   }
 

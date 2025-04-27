@@ -1,4 +1,4 @@
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../../generales/Sidebar";
 
 export default function subirArchivo() {
   return (

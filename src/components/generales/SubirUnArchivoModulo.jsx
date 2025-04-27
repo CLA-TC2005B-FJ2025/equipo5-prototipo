@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import uploadIcon from "../../../public/images/sidebar/upload.svg";
-import Input from "../Input";
+import Input from "../generales/Input.jsx";
 
 export default function SubirUnArchivo() {
   const [archivo, setArchivo] = useState();
@@ -70,10 +69,11 @@ export default function SubirUnArchivo() {
         tabIndex="0"
       >
         <img
-          className="uploadIcon"
-          src={uploadIcon}
-          alt="icono de subir archivo"
+         className="uploadIcon"
+         src="/images/sidebar/upload.svg"
+         alt="icono de subir archivo"
         />
+
         <p>
           <b>Arrastra</b> y <b>suelta</b> el archivo o seleccionalo.
         </p>

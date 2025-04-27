@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SignIn from "./Paginas/SignIn";
+import SignIn from "./components/paginas/auth/SignIn.jsx";
 import { useNavigate } from "react-router";
 
 export default function App() {

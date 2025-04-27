@@ -1,4 +1,4 @@
-import Sidebar from "../SidebarAdmin";
+import Sidebar from "./SidebarAdmin";
 
 export default function EncuestasActivas() {
   return (

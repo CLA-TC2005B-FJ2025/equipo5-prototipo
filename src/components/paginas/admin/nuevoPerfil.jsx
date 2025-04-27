@@ -1,7 +1,7 @@
-import Sidebar from "../components/Sidebar";
-import NavBar from "../components/NavBar";
+import Sidebar from "./SidebarAdmin";
+import NavBar from "../../generales/NavBar";
 import { useState, useRef } from "react";
-import "../Styles/NuevoPerfil.css";
+import "../../../Styles/NuevoPerfil.css";
 
 export default function NuevoPerfil() {
   const [form, setForm] = useState({
