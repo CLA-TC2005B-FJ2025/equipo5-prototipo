@@ -2,7 +2,7 @@ import Sidebar from "./SidebarAdmin";
 import NavBar from "../../generales/NavBar";
 import SubirUnArchivo from "../../generales/SubirUnArchivoModulo.jsx"; //este es el modulo
 import InfoECOA from "../../generales/EcoasInfoDashboard.jsx";
-import EncActivas from "../../generales/EncActivasDashboard.jsx"
+import EncActivas from "../../generales/EncActivasDashboard.jsx";
 import "../../../Styles/Dashboard.css";
 
 export default function Dashboard() {
