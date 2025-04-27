@@ -1,10 +1,6 @@
-<<<<<<< HEAD:src/components/paginas/admin/encuestasActivas.jsx
-import Sidebar from "./SidebarAdmin";
-=======
-import Sidebar from "../components/Sidebar";
-import NavBar from "../components/NavBar";
-import "../Styles/EncuestasActivas.css";
->>>>>>> avanceFront:src/Paginas/encuestasActivas.jsx
+import Sidebar from "./SidebarAdmin"
+import NavBar from "../../generales/NavBar";
+import "../../../Styles/EncuestasActivas.css";
 
 export default function EncuestasActivas() {
   const userName = localStorage.getItem("userName") || "Usuario";
