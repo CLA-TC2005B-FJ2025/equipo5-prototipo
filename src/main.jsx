@@ -20,9 +20,9 @@ createRoot(document.getElementById("root")).render(
           <Route
             path="/dashboard"
             element={
-              <RutaPrivada>
+              //<RutaPrivada>
                 <Dashboard />
-              </RutaPrivada>
+              //</RutaPrivada>
             }
           />
           <Route
@@ -36,17 +36,17 @@ createRoot(document.getElementById("root")).render(
           <Route
             path="/nuevoPerfil"
             element={
-              <RutaPrivada>
+              //<RutaPrivada>
                 <NuevoPerfil />
-              </RutaPrivada>
+              //</RutaPrivada>
             }
           />
           <Route
             path="/encuestasActivas"
             element={
-              <RutaPrivada>
+              //<RutaPrivada>
                 <EncuestasActivas />
-              </RutaPrivada>
+              //</RutaPrivada>
             }
           />
           <Route
