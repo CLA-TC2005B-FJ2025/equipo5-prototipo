@@ -3,17 +3,16 @@
   max-width: 200px;
 }
 
-/* Layour del dashboard */
+/* Layout del dashboard */
 .MainContent {
-  border: solid 1px red;
   display: grid;
-  grid-template-columns: repeat(30, 1fr);
+  grid-template-columns: repeat(30, minmax(0, 1fr)); /* ← Cambiado */
   grid-template-rows: 55px repeat(2, 1fr);
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
   justify-content: center;
   max-height: 80%;
-  max-width: 1350px;
+  max-width: 1500px;
 }
 
 .MainContent > div {
@@ -23,44 +22,199 @@
 
 /* crear el grid dentro del dashboard */
 .div1 {
-  border: solid 2px blue !important;
-  grid-area: 2 / 1 / 3 / 8;
+  grid-area: 2 / 1 / 3 / 7; 
+  background-color: var(--form-bg);
 }
+
 .div2 {
-  grid-area: 2 / 8 / 3 / 22;
-  border: solid 2px blue !important;
+  grid-area: 2 / 7 / 3 / 24;
+  background-color: var(--form-bg);
 }
+
 .div3 {
-  grid-area: 2 / 22 / 3 / 30;
-  border: solid 2px blue !important;
+  grid-area: 2 / 24 / 3 / 30;
+  background-color: var(--form-bg);
 }
+
 .div4 {
-  grid-area: 3 / 1 / 4 / 12;
-  border: solid 2px blue !important;
+  grid-area: 3 / 1 / 4 / 11;
+  background-color: var(--form-bg);
 }
 .div5 {
-  grid-area: 3 / 12 / 4 / 23;
-  border: solid 2px blue !important;
+  grid-area: 3 / 11 / 4 / 22; 
+  background-color: var(--form-bg);
 }
 .div6 {
-  grid-area: 3 / 23 / 4 / 30;
-  border: solid 2px blue !important;
+  grid-area: 3 / 22 / 4 / 30;
+  background-color: var(--form-bg);
 }
 
 /* Aqui vamos a poner los estilos de los componentes del dashboard tmb */
-/* Subir un archivo  (div 3) */
+/* Modulo 1 - info de las ecoas */
+.frame {
+  /* min-width: 240px; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  border-radius: 15px;
+}
+
+.semiCirculo {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -60%) rotate(240deg); 
+  width: 75%;
+  min-width: 150px;
+  aspect-ratio: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: linear-gradient(var(--primary-hover-color) 60%, #000b2f);
+  mask:
+    linear-gradient(#00000000 0 0) content-box intersect,
+    conic-gradient(#000 240deg, #0000 0);
+  z-index: 1;
+}
+
+.contenidoEncima {
+  position: relative;
+  z-index: 2; 
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.contenidoEncima > h1 {
+  height: 60%;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.mainText {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.subUno {
+  line-height: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.ecoaListBtn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+}
+
+.ecoaListBtn > button {
+  background-color: var(--button-grey);
+  height: 40px;
+  padding: 0;
+  font-weight: bold;
+  color: var(--text-dark-two);
+  width: 50%;
+}
+
+/* Modulo 2 - Principales Ecoas activas */
+.frameEncuestasAct {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerEncAct {
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+.headerEncAct > h1 {
+  align-self: center;
+  flex: 1;
+  padding: 2rem 0rem .7rem 2rem;
+}
+
+.headerEncAct > h1 + div {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding-top: 10px;
+  padding-right: 1rem;
+  align-items: center;
+
+}
+
+/* tamaños del texto */
+.headerEncAct > h1,
+.headerEncAct > h1 + div > h1 {
+  font-size: 1.5rem;
+}
+
+.headerEncAct > h1 + div > h1 + h3 {
+  line-height: 1px;
+  font-size: .9rem;
+}
+
+.cuerpoEncAct {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.cuerpoEncAct > div {
+  display: flex;
+  align-items: top;
+  gap: 1rem;
+}
+
+.cuerpoEncAct > div:first-child > h4{
+  font-weight: bold !important;
+}
+
+
+.cuerpoEncAct > div > h4:first-child {
+  text-align: start;
+  padding-left: 1rem;
+  flex: 2;
+}
+
+.cuerpoEncAct > div > h4 {
+  text-align: center;
+  font-weight: normal !important;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Modulo 3 - Subir un archivo Dropzone */
 .subirArchivoContainer {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 1.2rem;
-  background-color: var(--form-bg);
   height: 100%;
   width: 100%;
   border-radius: 15px;
 }
 
-/* es el segundo div que tiene el border */
+/* dropzone */
 .dropzone {
   flex: 1;
   border: dashed 4px var(--primary-hover-color);
@@ -110,78 +264,62 @@ input[type="file"] {
   background-color: var(--button-grey);
 }
 
+/* -------------  RESPONSIVE DESIGN ------------- */
 
-/* Modulo 1 - info de las ecoas */
-.frame {
-  min-width: 240px;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; 
-  background-color: var(--form-bg);
-  border-radius: 15px;
+/* ✅ Para laptops más pequeñas */
+@media (max-width: 1200px) {
+  .MainContent {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .div1 {
+    grid-area: 2 / 7 / 3 / 13;
+  }
+  .div2 {
+    grid-area: 3 / 1 / 4 / 13;
+  }
+  .div3 {
+    grid-area: 2 / 1 / 3 / 7;
+  }
+  .div4 {
+    grid-area: 4 / 1 / 5 / 7;
+  }
+  .div5 {
+    grid-area: 4 / 6 / 5 / 13;
+  }
+  .div6 {
+    grid-area: 5 / 1 / 6 / 13;
+  }
+
+  .frame {
+    min-width: 0; /* ✅ Permitimos que se encoja */
+  }
+  .contenidoEncima{
+    height: 90%;
+  }
+  .semiCirculo{
+    top: 50%; 
+    left: 50%; 
+    width: 50%;
+    transform: translate(-50%, -60%) rotate(240deg); 
+  }
+  .contenidoEncima > h1{
+    font-size: 4rem;
+  }
 }
 
-.semiCirculo {
-  position: absolute;
-  top: 30px;
-  width: 75%;
-  aspect-ratio: 1;
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: linear-gradient(var(--primary-hover-color) 60%, #000b2f);
-  transform: translateX(17%) rotate(240deg);
-  mask:
-    linear-gradient(#00000000 0 0) content-box intersect,
-    conic-gradient(#000 240deg, #0000 0);
-  z-index: 1; 
-}
+/* ✅ Para tablets o pantallas pequeñas */
+@media (max-width: 768px) {
+  .MainContent {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
 
-.contenidoEncima {
-  position: relative;
-  z-index: 2; 
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-}
+  .div1, .div2, .div3, .div4, .div5, .div6 {
+    grid-area: auto;
+  }
 
-.contenidoEncima > h1 {
-  height: 55%;
-  font-size: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-
-.mainText{
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.subUno{
-  line-height: 20px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-.ecoaListBtn{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 160px;
-}
-
-.ecoaListBtn > button {
-  background-color: var(--button-grey);
-  height: 30px;
-  padding: 0;
-  font-weight: bold;
-  color: var(--text-dark-two);
-  width: 50%;
+  .MainContent > div {
+    grid-column: 1 / -1;
+    min-height: 200px;
+  }
 }

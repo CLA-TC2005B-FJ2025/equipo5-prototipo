@@ -80,7 +80,7 @@ export default function SubirUnArchivo() {
 
         <div>
           <label className="botonSubirArchivo" htmlFor="subir-archivo">
-            Seleccionar Archivo
+            Seleccionar
           </label>
           <Input
             type="file"

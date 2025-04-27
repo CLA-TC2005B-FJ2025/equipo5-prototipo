@@ -2,6 +2,7 @@ import Sidebar from "./SidebarAdmin";
 import NavBar from "../../generales/NavBar";
 import SubirUnArchivo from "../../generales/SubirUnArchivoModulo.jsx"; //este es el modulo
 import InfoECOA from "../../generales/EcoasInfoDashboard.jsx";
+import EncActivas from "../../generales/EncActivasDashboard.jsx"
 import "../../../Styles/Dashboard.css";
 
 export default function Dashboard() {
@@ -18,7 +19,9 @@ export default function Dashboard() {
         <div className="div1">
           <InfoECOA></InfoECOA>
         </div>
-        <div className="div2">PRINCIPALES ENCUESTAS ACTIVAS</div>
+        <div className="div2">
+          <EncActivas></EncActivas>
+        </div>
         <div className="div3">
           <SubirUnArchivo></SubirUnArchivo>
         </div>

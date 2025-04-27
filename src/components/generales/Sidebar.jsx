@@ -10,7 +10,7 @@ import "../../Styles/Sidebar.css";
 
 import { useNavigate } from "react-router";
 import BotonLogout from "./BotonLogout";
-
+// este modulo actualmente no se utiliza me parece
 export default function Sidebar({ botonActivoAct }) {
   const navigate = useNavigate();
 

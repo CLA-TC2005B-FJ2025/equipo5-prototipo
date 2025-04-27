@@ -29,3 +29,11 @@ body {
   grid-template-columns: 300px 1fr;
   grid-template-rows: 100px 1fr;
 }
+
+.pointer{
+  cursor: pointer;
+}
+
+.pointer:hover {
+  text-decoration: underline;
+}
