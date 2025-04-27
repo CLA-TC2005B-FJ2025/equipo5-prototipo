@@ -75,7 +75,7 @@ export default function SubirUnArchivo() {
         />
 
         <p>
-          <b>Arrastra</b> y <b>suelta</b> el archivo o seleccionalo.
+          <b>Arrastra</b> y <b>suelta</b> el archivo.
         </p>
 
         <div>
