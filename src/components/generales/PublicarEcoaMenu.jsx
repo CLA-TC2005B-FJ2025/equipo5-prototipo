@@ -68,7 +68,7 @@ export default function MenuContextual() {
           </div>
         </div>
         <div className="publicar-btn">
-          <button >Publicar ECOA</button>
+          <button>Publicar ECOA</button>
         </div>
       </div>
     </div>

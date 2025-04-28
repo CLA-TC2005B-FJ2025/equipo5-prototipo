@@ -10,7 +10,7 @@
   position: relative;
   top: 0;
   left: 50%;
-  transform: translate(-50%,0%);
+  transform: translate(-50%, 0%);
 }
 
 .info-general,
@@ -45,9 +45,7 @@ label.info-item {
 .checkBntPE input[type="checkbox"] {
   width: 16px;
   height: 16px;
-  accent-color: var(
-    --primary-color
-  ); 
+  accent-color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -72,7 +70,6 @@ label.info-item {
 .visibilidad {
   display: flex;
   flex-direction: column;
-
 }
 
 .publicar-btn {
@@ -80,7 +77,7 @@ label.info-item {
   justify-content: center;
 }
 
-.publicar-btn  > button{
+.publicar-btn > button {
   align-self: center;
   justify-self: center;
   width: 40%;

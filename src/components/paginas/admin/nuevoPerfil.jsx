@@ -67,13 +67,12 @@ export default function NuevoPerfil() {
       </div>
 
       <div className="header">
-          <h1 >Nuevo Perfil</h1>
+        <h1>Nuevo Perfil</h1>
       </div>
 
       <div className="nuevo-perfil-container">
         {" "}
         {/*MainCntent*/}
-
         <div className="form-box">
           <div className="form-header">
             <h2>Crea un perfil nuevo</h2>
