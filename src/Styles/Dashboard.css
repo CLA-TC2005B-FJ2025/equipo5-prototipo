@@ -11,7 +11,7 @@
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   justify-content: center;
-  max-height: 700px;
+  max-height: 600px;
   max-width: 1500px;
 }
 
@@ -302,7 +302,7 @@ input[type="file"] {
   .semiCirculo {
     top: 50%;
     left: 50%;
-    width: 50%;
+    width: 40%;
     transform: translate(-50%, -60%) rotate(240deg);
   }
   .contenidoEncima > h1 {

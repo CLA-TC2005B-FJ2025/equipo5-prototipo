@@ -1,15 +1,23 @@
 .encuestas-activas-container {
   display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
   gap: 2rem;
-  height: 100%;
+  width: 100%;
+  max-width: 1500px;
+  padding: 2rem 2rem 2rem 0rem;
+  margin: 0 auto; 
+  height: fit-content;
 }
 
 .encuestas-main-content {
-  flex: 2.5;
-  max-width: 650px;
+  background-color: var(--form-bg);
+  border-radius: var(--border-radius-card);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 5; 
+  min-width: 0;
 }
 
 .encuestas-header {
@@ -21,36 +29,44 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
-  color: var(--text-dark);
+  color: var(--text-dark-two);
 }
 
 .encuestas-list {
-  background: white;
+  height: 580px;
+  background: var(--form-bg);
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-card);
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .encuestas-list table {
   width: 100%;
-  max-width: 650px;
   border-collapse: collapse;
 }
 
+
 .encuestas-list th,
 .encuestas-list td {
-  padding: 1rem;
+  padding: .5rem;
+  text-align: center;
+}
+
+.encuestas-list th{
+  padding: 2rem .5rem .5rem .5rem;
+}
+
+.encuestas-list th:first-child,
+.encuestas-list td:first-child{
   text-align: left;
-  border-bottom: 1px solid #ccc;
 }
 
 .encuestas-list th {
-  background-color: var(--background-light);
   color: var(--text-dark-two);
 }
 
 .encuestas-list td {
-  color: var(--text-dark);
+  color: var(--text-dark-two);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -58,11 +74,40 @@
 
 .encuestas-list td a {
   color: var(--primary-color);
+  text-decoration: underline;
+}
+.encuestas-list td a:hover{
+  color: var(--primary-hover-color);
+}
+
+.tituloEcoasAC{
+  display: flex;
+}
+
+.tituloEcoasAC > div:first-child{
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  align-items: end;
+}
+.tituloEcoasAC > div:first-child > p {
+  padding-bottom: .5rem;
+}
+
+.tituloEcoasAC > div:nth-child(2){
+  text-align: center;
+  line-height: 25px;
   font-weight: bold;
 }
 
+.encuestas-table-container {
+  max-height: 400px; 
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
 .encuestas-filtros {
-  flex: 1;
+  min-height: 580px;
   background: white;
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-card);
@@ -71,4 +116,53 @@
   flex-direction: column;
   gap: 1rem;
   height: fit-content;
+  flex: 1;
+}
+
+.encuestas-filtros > h2 {
+}
+
+.encuestas-filtros > div {
+  flex: 2;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filtro-item label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--text-dark-two);
+}
+
+.filtro-item select {
+  appearance: none;
+  border: 1px solid #ccc;
+  height: 3rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filtro-item select:focus{
+  border-color: var(--primary-color);
+}
+
+.filtro-btn {
+  margin-top: 1rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filtro-btn:hover {
+  background: var(--primary-hover-color);
 }

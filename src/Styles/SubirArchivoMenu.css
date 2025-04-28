@@ -5,6 +5,12 @@
   padding: 2rem;
   background: var(--form-bg);
   border-radius: 15px;
+  flex-direction: column;
+  max-width: 600px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0%);
 }
 
 .info-general,
@@ -30,10 +36,10 @@ label.info-item {
 }
 
 .checkBntPE {
+  height: 35px;
   display: flex;
   align-items: center; /* Alinea verticalmente checkbox y texto */
   gap: 0.5rem; /* Separación entre checkbox y texto */
-  margin-bottom: 0.5rem;
 }
 
 .checkBntPE input[type="checkbox"] {
@@ -41,7 +47,7 @@ label.info-item {
   height: 16px;
   accent-color: var(
     --primary-color
-  ); /* Cambia color del checkbox (depende navegador) */
+  ); 
   cursor: pointer;
 }
 
@@ -66,20 +72,27 @@ label.info-item {
 .visibilidad {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+
 }
 
 .publicar-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.publicar-btn  > button{
+  align-self: center;
+  justify-self: center;
+  width: 40%;
   margin-top: 2rem;
   padding: 1rem 2rem;
   background-color: var(--primary-color);
   color: white;
-  font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.publicar-btn:hover {
+.publicar-btn > button:hover {
   background-color: var(--primary-hover-color);
 }

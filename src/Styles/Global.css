@@ -46,8 +46,10 @@ p {
 /* Reglas globales de formularios e inputs */
 input,
 textarea,
-select {
+select,
+.info-value {
   width: 100%;
+  min-height: 48px;
   padding: var(--padding-default);
   border: 1px solid #ccc;
   border-radius: var(--border-radius-default);
@@ -114,4 +116,12 @@ form select {
   font-size: 1rem;
   background-color: #f4f4f4;
   appearance: none;
+}
+
+.header{
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
 }
