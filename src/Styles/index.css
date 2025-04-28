@@ -28,7 +28,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 90px 1fr;
   grid-template-areas: 
     "Sidebar Navbar"
     "Sidebar MainContent";
