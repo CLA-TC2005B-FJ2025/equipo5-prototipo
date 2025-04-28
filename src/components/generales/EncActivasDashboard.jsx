@@ -21,7 +21,7 @@ export default function EncuestasActivas() {
           <h4>Laura González</h4>
           <h4>450</h4>
           <h4>28</h4>
-          <h4 className="pointer">Ver datos</h4>
+          <h4 className="pointer"><a href="#">Ver datos</a></h4>
         </div>
 
         <div>
@@ -29,7 +29,7 @@ export default function EncuestasActivas() {
           <h4>Carlos Díaz</h4>
           <h4>520</h4>
           <h4>35</h4>
-          <h4 className="pointer">Ver datos</h4>
+          <h4 className="pointer"><a href="#">Ver datos</a></h4>
         </div>
 
         <div>
@@ -37,7 +37,7 @@ export default function EncuestasActivas() {
           <h4>Mariana Torres</h4>
           <h4>480</h4>
           <h4>30</h4>
-          <h4 className="pointer">Ver datos</h4>
+          <h4 className="pointer"><a href="#">Ver datos</a></h4>
         </div>
 
         <div>
@@ -45,7 +45,7 @@ export default function EncuestasActivas() {
           <h4>José Martínez</h4>
           <h4>410</h4>
           <h4>25</h4>
-          <h4 className="pointer">Ver datos</h4>
+          <h4 className="pointer"><a href="#">Ver datos</a></h4>
         </div>
 
         <div>
@@ -53,7 +53,7 @@ export default function EncuestasActivas() {
           <h4>Andrea López</h4>
           <h4>470</h4>
           <h4>29</h4>
-          <h4 className="pointer">Ver datos</h4>
+          <h4 className="pointer"><a href="#">Ver datos</a></h4>
         </div>
 
         <div>
@@ -61,7 +61,7 @@ export default function EncuestasActivas() {
           <h4>Raúl Fernández</h4>
           <h4>490</h4>
           <h4>31</h4>
-          <h4 className="pointer">Ver datos</h4>
+          <h4 className="pointer"><a href="#">Ver datos</a></h4>
         </div>
       </div>
     </div>

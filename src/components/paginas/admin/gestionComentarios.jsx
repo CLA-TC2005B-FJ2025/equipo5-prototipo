@@ -54,37 +54,42 @@ export default function GestionComentarios() {
       <div className="Navbar">
         <NavBar Usuario={localStorage.getItem("userName")} />
       </div>
-      <div className="MainContent gestion-comentarios-content">
-        <div className="gestion-box">
-          <div className="header-bar">
-            <h3>ECOA’s de {docente}</h3>
-            <select
-              value={docente}
-              onChange={(e) => setDocente(e.target.value)}
-              className="docente-select"
-            >
-              <option value="Jose Perez">Jose Perez</option>
-              <option value="Otro Docente">Otro Docente</option>
-            </select>
-          </div>
-          <div className="cards-grid">
-            {materias.map((materia, index) => (
-              <div key={index} className="card">
-                <h4>{materia.nombre}</h4>
-                <p>{materia.total} Comentarios totales</p>
-                {materia.filtrados > 0 && (
-                  <p>{materia.filtrados} Comentarios filtrados</p>
-                )}
-                {materia.eliminados > 0 && (
-                  <p>{materia.eliminados} Comentario eliminado</p>
-                )}
-                <a href="#" className="ver-link">
-                  Ver...
-                </a>
+      
+      <div>
+        <div><h1 className="headerDos">Gestión de comentarios</h1></div>
+        <div className="gestion-comentarios-content">
+          <div className="gestion-box">
+            <div className="header-bar">
+              <h3>ECOA’s de {docente}</h3>
+              <div>
+                <p>Docente</p>
+                <select
+                  value={docente}
+                  onChange={(e) => setDocente(e.target.value)}
+                  className="docente-select"
+                >
+                  <option value="Jose Perez">Jose Perez</option>
+                  <option value="Otro Docente">Otro Docente</option>
+                </select>
               </div>
-            ))}
+            </div>
+            <div className="cards-grid">
+              {materias.map((materia, index) => (
+                <div key={index} className="EcoaCard">
+                  <h4><a href="#">  {materia.nombre} </a></h4>
+                  <p>{materia.total} Comentarios totales</p> 
+                  {materia.filtrados > 0 && (
+                    <p>{materia.filtrados} Comentarios filtrados</p>
+                  )}
+                  {materia.eliminados > 0 && (
+                    <p>{materia.eliminados} Comentario eliminado</p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   );

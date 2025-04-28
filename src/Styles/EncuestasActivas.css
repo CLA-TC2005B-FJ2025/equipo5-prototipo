@@ -73,9 +73,9 @@
 
 .encuestas-list td a {
   color: var(--primary-color);
-  text-decoration: underline;
 }
 .encuestas-list td a:hover {
+  text-decoration: underline;
   color: var(--primary-hover-color);
 }
 

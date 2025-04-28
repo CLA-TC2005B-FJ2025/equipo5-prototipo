@@ -143,6 +143,7 @@ export default function EncuestasActivas() {
                         <a href="#">Ver datos</a>
                       </td>
                     </tr>
+                    
                   </tbody>
                 </table>
               </div>

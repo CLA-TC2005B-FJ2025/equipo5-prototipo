@@ -125,3 +125,33 @@ form select {
   align-items: baseline;
   justify-content: baseline;
 }
+
+.headerDos{
+  font-size: 2rem;
+}
+
+select {
+  position: relative;
+  appearance: none; /* Quitar flecha nativa */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--background-light) !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg fill='%23303030' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 3rem; /* Dejar espacio para la flecha */
+}
+
+a{
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-hover-color);
+  text-decoration: underline;
+}
+
+a:active{
+  opacity: .9;
+}
