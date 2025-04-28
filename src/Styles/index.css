@@ -25,7 +25,7 @@ body {
 
 
 .MainPageLayout {
-  height: 120vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 100px 1fr;
