@@ -66,7 +66,9 @@ export default function NuevoPerfil() {
         <NavBar Usuario={localStorage.getItem("userName")} />
       </div>
 
-      <div className="nuevo-perfil-container">  {/*MainCntent*/}
+      <div className="nuevo-perfil-container">
+        {" "}
+        {/*MainCntent*/}
         <div className="form-box">
           <div className="form-header">
             <h2>Crea un perfil nuevo</h2>

@@ -23,15 +23,14 @@ body {
   color: var(--text-dark);
 }
 
-
 .MainPageLayout {
   height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 90px 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "Sidebar Navbar"
-    "Sidebar MainContent";
+    "Sidebar MainContenido";
 }
 
 .Sidebar {
@@ -47,7 +46,7 @@ body {
 }
 
 .MainContent {
-  grid-area: MainContent;
+  grid-area: MainContenido;
   overflow-y: auto;
   overflow-x: hidden;
 }

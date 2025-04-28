@@ -1,10 +1,10 @@
 /* temporal */
-.MainContent > button {
+.DashboardMainContent > button {
   max-width: 200px;
 }
 
 /* Layout del dashboard */
-.MainContent {
+.DashboardMainContent {
   display: grid;
   grid-template-columns: repeat(30, minmax(0, 1fr)); /* ← Cambiado */
   grid-template-rows: 55px repeat(2, 1fr);
@@ -15,7 +15,7 @@
   max-width: 1500px;
 }
 
-.MainContent > div {
+.DashboardMainContent > div {
   min-height: 270px;
   border-radius: 15px;
 }
@@ -216,7 +216,6 @@
   line-height: 25px;
 }
 
-
 /* dropzone */
 .dropzone {
   flex: 1;
@@ -271,7 +270,7 @@ input[type="file"] {
 
 /* ✅ Para laptops más pequeñas */
 @media (max-width: 1200px) {
-  .MainContent {
+  .DashboardMainContent {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
@@ -313,7 +312,7 @@ input[type="file"] {
 
 /* ✅ Para tablets o pantallas pequeñas */
 @media (max-width: 768px) {
-  .MainContent {
+  .DashboardMainContent {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
@@ -326,7 +325,7 @@ input[type="file"] {
     grid-area: auto;
   }
 
-  .MainContent > div {
+  .DashboardMainContent > div {
     grid-column: 1 / -1;
     min-height: 200px;
   }

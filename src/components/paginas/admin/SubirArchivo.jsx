@@ -1,4 +1,5 @@
 import Sidebar from "../../generales/Sidebar";
+import MenuContextual from "../../generales/PublicarEcoaMenu";
 
 export default function subirArchivo() {
   return (
@@ -7,7 +8,7 @@ export default function subirArchivo() {
         <Sidebar botonActivoAct={"Subir Archivo"}></Sidebar>
       </div>
       <div className="MainContent">
-        <h1>SUBIR ARCHIVO</h1>
+        <MenuContextual></MenuContextual>
       </div>
     </div>
   );

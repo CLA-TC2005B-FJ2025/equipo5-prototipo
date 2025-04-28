@@ -15,7 +15,7 @@ export default function Dashboard() {
         <NavBar Usuario={localStorage.getItem("userName")}></NavBar>
       </div>
 
-      <div className="MainContent">
+      <div className="DashboardMainContent">
         <div className="div1">
           <InfoECOA></InfoECOA>
         </div>

@@ -1,0 +1,85 @@
+.menu-contextual-container {
+  grid-area: MainContenido;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--form-bg);
+  border-radius: 15px;
+}
+
+.info-general,
+.opciones-publicacion {
+  flex: 1;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.info-item label {
+  font-weight: bold;
+  color: var(--text-dark-two);
+}
+
+label.info-item {
+  font-weight: bold;
+  color: black;
+}
+
+.checkBntPE {
+  display: flex;
+  align-items: center; /* Alinea verticalmente checkbox y texto */
+  gap: 0.5rem; /* Separación entre checkbox y texto */
+  margin-bottom: 0.5rem;
+}
+
+.checkBntPE input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(
+    --primary-color
+  ); /* Cambia color del checkbox (depende navegador) */
+  cursor: pointer;
+}
+
+.checkBntPE p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-dark-two);
+}
+
+.info-value {
+  background-color: #ddd;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 0.25rem;
+}
+
+.opciones-grid {
+  padding-top: 1rem;
+  display: flex;
+}
+
+.visibilidad {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.publicar-btn {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.publicar-btn:hover {
+  background-color: var(--primary-hover-color);
+}
