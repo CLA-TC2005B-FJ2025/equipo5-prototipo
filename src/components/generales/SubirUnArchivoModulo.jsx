@@ -1,66 +1,63 @@
 import { useEffect, useState } from "react";
 import Input from "../generales/Input.jsx";
+import Papa from "papaparse";
 
 export default function SubirUnArchivo() {
   const [archivo, setArchivo] = useState();
-  const extensionesPermitidas = [".csv", ".xlsx"];
-
-  function validarExtension(nombreArchivo) {
-    return extensionesPermitidas.some((ext) => nombreArchivo.endsWith(ext));
-  }
-
-  //si el archivo tiene existe, es csv o xlsx, usa el api de filereader y lo lee
-  //al cargar lo loggea a la consola, pero en si deberiamos pasarlo a otra funcion
-  //que lo seccione o lo suba a la base de datos, se lo atribuya a un usuario
-  //tambien abrir el menu para agregar las encuestas, etc...
-
-  function handleFiles(files) {
-    if (files.length > 0) {
-      const archivo = files[0];
-      if (validarExtension(archivo.name)) {
-        if (archivo) {
-          console.log("cargando archivo!");
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            const contenido = e.target.result;
-            console.log("Contenido del archivo:", contenido);
-          };
-          reader.readAsText(archivo);
-        }
-        setArchivo(archivo);
-      } else {
-        console.log("Tipo de archivo no permitido. Solo .csv y .xlsx");
-      }
-    }
-  }
-
-  function manejarArchivo(e) {
-    handleFiles(e.target.files);
-  }
-
-  function dropHandler(e) {
-    e.preventDefault();
-    setAnimacion(false);
-    handleFiles(e.dataTransfer.files);
-  }
-
-  function dragoverHandler(e) {
-    e.preventDefault();
-    setAnimacion(true);
-  }
-
-  function dragLeaveHandler(e) {
-    e.preventDefault();
-    setAnimacion(false);
-  }
-
-  //useState para manejar animacion de cuando se esta arrastrando un archivo!
   const [animacion, setAnimacion] = useState(false);
+  const extensionesPermitidas = [".csv"];
+
+  const validarExtension = nombre =>
+    extensionesPermitidas.some(ext => nombre.endsWith(ext));
+
+  const handleFiles = files => {
+    if (!files.length) return;
+    const file = files[0];
+    if (!validarExtension(file.name)) {
+      console.warn("Sólo .csv");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.readAsText(file, "UTF-8");
+    reader.onload = e => {
+      const contenido = e.target.result;
+
+      // parse completo, header=true
+      const resultado = Papa.parse(contenido, {
+        header: true,
+        skipEmptyLines: true,
+      });
+
+      // enviamos TODO el array de objetos
+      fetch("https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir", {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=UTF-8" },
+        body: JSON.stringify({ encuestas: resultado.data }),
+      })
+        .then(res => res.ok ? res.text() : Promise.reject(res.statusText))
+        .then(msg => {
+          console.log("Servidor:", msg);
+          alert("Encuestas subidas exitosamente!");
+        })
+        .catch(err => {
+          console.error("Error al subir:", err);
+          alert("Hubo un error.");
+        });
+    };
+
+    reader.readAsText(file, "ISO-8859-1");
+    setArchivo(file);
+  };
+
+  const manejarArchivo = e => handleFiles(e.target.files);
+  const dropHandler     = e => { e.preventDefault(); setAnimacion(false); handleFiles(e.dataTransfer.files) };
+  const dragoverHandler = e => { e.preventDefault(); setAnimacion(true) };
+  const dragLeaveHandler= e => { e.preventDefault(); setAnimacion(false) };
 
   return (
     <div className="subirArchivoContainer">
       <h2>Subir un archivo</h2>
-
       <div
         className={`dropzone ${animacion ? "activo" : ""}`}
         onDrop={dropHandler}

@@ -1,8 +1,8 @@
 export default function infoEcoas() {
   return (
-    <div class="frame">
-      <div class="semiCirculo"></div>
-      <div class="contenidoEncima">
+    <div className="frame">
+      <div className="semiCirculo"></div>
+      <div className="contenidoEncima">
         <h1>15</h1>
         <div>
           <p className="mainText">ECOA'S</p>
