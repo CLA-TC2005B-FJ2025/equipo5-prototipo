@@ -54,9 +54,11 @@ export default function GestionComentarios() {
       <div className="Navbar">
         <NavBar Usuario={localStorage.getItem("userName")} />
       </div>
-      
+
       <div>
-        <div><h1 className="headerDos">Gestión de comentarios</h1></div>
+        <div>
+          <h1 className="headerDos">Gestión de comentarios</h1>
+        </div>
         <div className="gestion-comentarios-content">
           <div className="gestion-box">
             <div className="header-bar">
@@ -76,8 +78,10 @@ export default function GestionComentarios() {
             <div className="cards-grid">
               {materias.map((materia, index) => (
                 <div key={index} className="EcoaCard">
-                  <h4><a href="#">  {materia.nombre} </a></h4>
-                  <p>{materia.total} Comentarios totales</p> 
+                  <h4>
+                    <a href="#"> {materia.nombre} </a>
+                  </h4>
+                  <p>{materia.total} Comentarios totales</p>
                   {materia.filtrados > 0 && (
                     <p>{materia.filtrados} Comentarios filtrados</p>
                   )}
@@ -89,7 +93,6 @@ export default function GestionComentarios() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

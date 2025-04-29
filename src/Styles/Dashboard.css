@@ -37,15 +37,14 @@
 }
 
 .div4 {
-  grid-area: 3 / 1 / 4 / 11;
+  grid-area: 3 / 1 / 4 / 13;
   background-color: var(--form-bg);
 }
 .div5 {
-  grid-area: 3 / 11 / 4 / 22;
-  background-color: var(--form-bg);
+
 }
 .div6 {
-  grid-area: 3 / 22 / 4 / 30;
+  grid-area: 3 / 13 / 4 / 30;
   background-color: var(--form-bg);
 }
 
@@ -329,4 +328,95 @@ input[type="file"] {
     grid-column: 1 / -1;
     min-height: 200px;
   }
+}
+.frameTresBotonesCards {
+  /* antes: rojo */
+  background-color: var(--form-bg); /* ya usabas var, genial */
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(
+    --border-radius-card
+  ); /* antes: var(--border-radius-card) */
+  box-shadow: var(--box-shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.busquedaDirectorio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.busquedaDirectorio input {
+  flex: 1;
+  font-size: 1rem;
+  border-radius: var(--border-radius-default);
+  border: 1px solid #ccc; 
+  padding: 0.5rem 1rem;
+  height: 40px;
+  background-color: var(--background-light) !important;
+  color: var(--text-dark-two);
+}
+
+.busquedaDirectorio input:focus{
+  border-color: var(--primary-color);
+}
+
+.iconoBuscar {
+  background-color: var(--primary-color);
+  color: white;
+
+  max-width: 100px;
+  border-radius: var(--border-radius-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.iconoBuscar:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.iconoBuscar svg {
+  width: 18px;
+  height: 18px;
+}
+
+.contenedorTarjetas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tarjetaDirectorio {
+  cursor: pointer;
+  flex: 1;
+  height: 140px;
+  background-color: var(--form-bg);
+  border-radius: var(--border-radius-default);
+  padding: 1rem;
+  text-align: center;
+  color: var(--primary-hover-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.tarjetaDirectorio:hover {
+  background-color: var(--button-grey-hover);
+}
+
+.tarjetaDirectorio:active{
+  opacity: .9;
 }

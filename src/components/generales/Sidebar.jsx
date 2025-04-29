@@ -33,13 +33,7 @@ export default function Sidebar({ botonActivoAct }) {
           active={botonActivoAct === "Dashboard"}
           onClick={() => navergarPestana("dashboard")}
         />
-        <SidebarButton
-          imgSrc={subirArchivoIcon}
-          content={"Subir Archivo"}
-          classN={"dashboardButton"}
-          active={botonActivoAct === "Subir Archivo"}
-          onClick={() => navergarPestana("subirArchivo")}
-        />
+
         <SidebarButton
           imgSrc={nuevoPerfilIcon}
           content={"Nuevo Perfil"}

@@ -30,7 +30,7 @@ export default function NuevoPerfil() {
 
     console.log("Perfil nuevo:", form);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/usuario`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}usuario`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

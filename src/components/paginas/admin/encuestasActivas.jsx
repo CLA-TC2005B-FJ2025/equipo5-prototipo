@@ -1,9 +1,72 @@
+import { useState, useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import Sidebar from "./SidebarAdmin";
 import NavBar from "../../generales/NavBar";
 import "../../../Styles/EncuestasActivas.css";
 
 export default function EncuestasActivas() {
   const userName = localStorage.getItem("userName") || "Usuario";
+  const navigate = useNavigate();
+
+  const [ecoas, setEcoas] = useState([]);
+  const [filteredEcoas, setFilteredEcoas] = useState([]);
+  const [totalRespuestas, setTotalRespuestas] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // filtros
+  const [selectedMateria, setSelectedMateria] = useState("");
+  const [selectedProfesor, setSelectedProfesor] = useState("");
+  const [selectedGrupo, setSelectedGrupo] = useState("");
+
+  useEffect(() => {
+    // fetch resumen con conteo
+    fetch(
+      `https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/resumenConConteo`,
+    )
+      .then((res) => {
+        if (!res.ok) throw new Error(res.statusText);
+        return res.json();
+      })
+      .then((json) => {
+        setEcoas(json.ecoas);
+        setFilteredEcoas(json.ecoas);
+        setTotalRespuestas(json.total);
+      })
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  // opciones para selects
+  const materias = useMemo(
+    () => [...new Set(ecoas.map((e) => e.materia))],
+    [ecoas],
+  );
+  const profesores = useMemo(
+    () => [...new Set(ecoas.map((e) => e.profesor))],
+    [ecoas],
+  );
+  const grupos = useMemo(
+    () => [...new Set(ecoas.map((e) => e.grupo))],
+    [ecoas],
+  );
+
+  const handleFilter = () => {
+    let list = ecoas;
+    if (selectedMateria) {
+      list = list.filter((e) => e.materia === selectedMateria);
+    }
+    if (selectedProfesor) {
+      list = list.filter((e) => e.profesor === selectedProfesor);
+    }
+    if (selectedGrupo) {
+      list = list.filter((e) => e.grupo === selectedGrupo);
+    }
+    setFilteredEcoas(list);
+  };
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="MainPageLayout">
@@ -22,12 +85,19 @@ export default function EncuestasActivas() {
             <div className="encuestas-list">
               <div className="tituloEcoasAC">
                 <div>
-                  <h1>27 ECOA's encontradas</h1>
-                  <p>(2) Filtros aplicados</p>
+                  <h1>{filteredEcoas.length} ECOA's encontradas</h1>
+                  <p>
+                    Filtros aplicados:{" "}
+                    {[
+                      selectedMateria ? 1 : 0,
+                      selectedProfesor ? 1 : 0,
+                      selectedGrupo ? 1 : 0,
+                    ].reduce((a, b) => a + b, 0)}
+                  </p>
                 </div>
 
                 <div>
-                  <h2>278</h2>
+                  <h2>{totalRespuestas}</h2>
                   <p>respuestas totales</p>
                 </div>
               </div>
@@ -39,111 +109,31 @@ export default function EncuestasActivas() {
                       <th>MATERIA</th>
                       <th>PROFESOR</th>
                       <th>GRUPO</th>
-                      <th>RESPUESTA</th>
+                      <th>RESPUESTAS</th>
                       <th>INFO</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Construcción de software y toma de decisiones</td>
-                      <td>Eliel Mejia</td>
-                      <td>400</td>
-                      <td>32</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Construcción de software y toma de decisiones</td>
-                      <td>Eliel Mejía</td>
-                      <td>400</td>
-                      <td>32</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Introducción a bases de datos</td>
-                      <td>Ana López</td>
-                      <td>385</td>
-                      <td>30</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Programación avanzada</td>
-                      <td>Carlos Jiménez</td>
-                      <td>410</td>
-                      <td>28</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Redes de computadoras</td>
-                      <td>Laura García</td>
-                      <td>395</td>
-                      <td>31</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Inteligencia artificial</td>
-                      <td>David Rodríguez</td>
-                      <td>420</td>
-                      <td>29</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Seguridad informática</td>
-                      <td>Mariana Pérez</td>
-                      <td>375</td>
-                      <td>27</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Ingeniería de software</td>
-                      <td>José Martínez</td>
-                      <td>405</td>
-                      <td>33</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Algoritmos y estructuras de datos</td>
-                      <td>Andrea Fernández</td>
-                      <td>390</td>
-                      <td>30</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Administración de proyectos TI</td>
-                      <td>Marco Gómez</td>
-                      <td>415</td>
-                      <td>34</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Desarrollo web</td>
-                      <td>Patricia Herrera</td>
-                      <td>380</td>
-                      <td>26</td>
-                      <td>
-                        <a href="#">Ver datos</a>
-                      </td>
-                    </tr>
-                    
+                    {filteredEcoas.map((e) => (
+                      <tr key={e.crn}>
+                        <td>{e.materia}</td>
+                        <td>{e.profesor}</td>
+                        <td>{e.grupo}</td>
+                        <td>{e.respuestasCount}</td>
+                        <td>
+                          <a
+                            className="pointer"
+                            onClick={() =>
+                              navigate("/subirArchivo", {
+                                state: { crn: e.crn },
+                              })
+                            }
+                          >
+                            Ver datos
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -155,56 +145,52 @@ export default function EncuestasActivas() {
             <div>
               <div className="filtro-item">
                 <label>Materia</label>
-                <select>
+                <select
+                  value={selectedMateria}
+                  onChange={(e) => setSelectedMateria(e.target.value)}
+                >
                   <option value="">Todas</option>
-                  <option>Construcción de software y toma de decisiones</option>
-                  <option>Introducción a bases de datos</option>
-                  <option>Programación avanzada</option>
-                  <option>Redes de computadoras</option>
-                  <option>Inteligencia artificial</option>
-                  <option>Seguridad informática</option>
-                  <option>Ingeniería de software</option>
-                  <option>Algoritmos y estructuras de datos</option>
-                  <option>Administración de proyectos TI</option>
-                  <option>Desarrollo web</option>
+                  {materias.map((m) => (
+                    <option key={m} value={m}>
+                      {m}
+                    </option>
+                  ))}
                 </select>
               </div>
 
               <div className="filtro-item">
                 <label>Profesor</label>
-                <select>
+                <select
+                  value={selectedProfesor}
+                  onChange={(e) => setSelectedProfesor(e.target.value)}
+                >
                   <option value="">Todos</option>
-                  <option>Eliel Mejía</option>
-                  <option>Ana López</option>
-                  <option>Carlos Jiménez</option>
-                  <option>Laura García</option>
-                  <option>David Rodríguez</option>
-                  <option>Mariana Pérez</option>
-                  <option>José Martínez</option>
-                  <option>Andrea Fernández</option>
-                  <option>Marco Gómez</option>
-                  <option>Patricia Herrera</option>
+                  {profesores.map((p) => (
+                    <option key={p} value={p}>
+                      {p}
+                    </option>
+                  ))}
                 </select>
               </div>
 
               <div className="filtro-item">
                 <label>Grupo</label>
-                <select>
+                <select
+                  value={selectedGrupo}
+                  onChange={(e) => setSelectedGrupo(e.target.value)}
+                >
                   <option value="">Todos</option>
-                  <option>400</option>
-                  <option>385</option>
-                  <option>410</option>
-                  <option>395</option>
-                  <option>420</option>
-                  <option>375</option>
-                  <option>405</option>
-                  <option>390</option>
-                  <option>415</option>
-                  <option>380</option>
+                  {grupos.map((g) => (
+                    <option key={g} value={g}>
+                      {g}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
-            <button className="filtro-btn">Filtrar</button>
+            <button className="filtro-btn" onClick={handleFilter}>
+              Filtrar
+            </button>
           </div>
         </div>
       </div>

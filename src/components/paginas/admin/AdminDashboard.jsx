@@ -4,6 +4,7 @@ import SubirUnArchivo from "../../generales/SubirUnArchivoModulo.jsx"; //este es
 import InfoECOA from "../../generales/EcoasInfoDashboard.jsx";
 import EncActivas from "../../generales/EncActivasDashboard.jsx";
 import "../../../Styles/Dashboard.css";
+import TresBotones from "../../generales/TresBotones.jsx";
 
 export default function Dashboard() {
   return (
@@ -25,8 +26,9 @@ export default function Dashboard() {
         <div className="div3">
           <SubirUnArchivo></SubirUnArchivo>
         </div>
-        <div className="div4">3 BOTONES</div>
-        <div className="div5">INFO DESTACADA</div>
+        <div className="div4">
+          <TresBotones></TresBotones>
+        </div>
         <div className="div6">ACCIONES RAPIDAS</div>
       </div>
     </div>

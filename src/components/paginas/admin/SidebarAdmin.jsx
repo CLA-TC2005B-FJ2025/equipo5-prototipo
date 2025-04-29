@@ -31,13 +31,6 @@ export default function Sidebar({ botonActivoAct }) {
           onClick={() => navegarPestana("dashboard")}
         />
         <SidebarButton
-          imgSrc="/images/sidebar/upload.svg"
-          content="Subir Archivo"
-          classN="dashboardButton"
-          active={botonActivoAct === "Subir Archivo"}
-          onClick={() => navegarPestana("subirArchivo")}
-        />
-        <SidebarButton
           imgSrc="/images/sidebar/person.svg"
           content="Nuevo Perfil"
           classN="dashboardButton"
