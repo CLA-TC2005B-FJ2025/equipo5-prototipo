@@ -1,9 +1,10 @@
 .gestion-comentarios-content {
   height: 80vh;
-  position: relative;
+  position: absolute;
+  width: 1800px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-40%, -45%);
   padding: 2rem 3rem;
   max-width: 1200px;
 }

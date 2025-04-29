@@ -329,6 +329,8 @@ input[type="file"] {
     min-height: 200px;
   }
 }
+
+/* Directorio de personas */
 .frameTresBotonesCards {
   /* antes: rojo */
   background-color: var(--form-bg); /* ya usabas var, genial */
@@ -419,4 +421,72 @@ input[type="file"] {
 
 .tarjetaDirectorio:active{
   opacity: .9;
+}
+
+/* Informacion destacada */
+.infoDestacadaContainer {
+  background-color: var(--form-bg);
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--box-shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoDestacadaContainer > h3 {
+  font-size: 1.5rem;
+}
+
+.infoDestacadaNumeros {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.infoDestacadaItem h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-dark-two);
+}
+
+.infoTitulo {
+  font-weight: bold;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-dark-two);
+}
+
+.infoDestacadaItem{
+  line-height: 35px;
+}
+
+.subtituloDos {
+  font-size: 0.75rem;
+  color: var(--text-dark);
+  line-height: 2px;
+  cursor: pointer;
+}
+
+.subtituloDos:hover{
+  text-decoration: underline;
+}
+
+.infoDestacadaBoton {
+  display: flex;
+  justify-content: center;
+}
+.infoDestacadaBoton > button {
+  max-width: 250px;
+}
+
+.infoDestacadaItem{
+  margin: 0;
+  padding: 0;
 }

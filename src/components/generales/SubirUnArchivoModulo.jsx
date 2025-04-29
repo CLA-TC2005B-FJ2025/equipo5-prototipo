@@ -40,8 +40,9 @@ export default function SubirUnArchivo() {
       )
         .then((res) => (res.ok ? res.text() : Promise.reject(res.statusText)))
         .then((msg) => {
-          console.error("Encuestas Agregadas de manera exitosa");
+          console.log("Encuestas Agregadas de manera exitosa");
           // Navega a la ruta deseada tras la carga
+          localStorage.setItem("archivos", localStorage.getItem("archivos") + 1)
           navigate("/subirArchivo");
         })
         .catch((err) => {

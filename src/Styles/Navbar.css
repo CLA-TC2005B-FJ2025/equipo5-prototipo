@@ -46,3 +46,9 @@ button.navBarBtn > img {
 .Navbar > div > button.navBarBtn:active {
   transform: scale(1.2);
 }
+
+
+.logoutBtn{
+  appearance: none;
+  filter: brightness(0) saturate(100%)
+}

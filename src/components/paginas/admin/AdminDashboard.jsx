@@ -5,6 +5,7 @@ import InfoECOA from "../../generales/EcoasInfoDashboard.jsx";
 import EncActivas from "../../generales/EncActivasDashboard.jsx";
 import "../../../Styles/Dashboard.css";
 import TresBotones from "../../generales/TresBotones.jsx";
+import InfoDestacada from "../../generales/InfoDestacada.jsx";
 
 export default function Dashboard() {
   return (
@@ -13,7 +14,7 @@ export default function Dashboard() {
         <Sidebar botonActivoAct="Dashboard"></Sidebar>
       </div>
       <div className="Navbar">
-        <NavBar Usuario={localStorage.getItem("userName")}></NavBar>
+        <NavBar Usuario={localStorage.getItem("userName").split("@")[0]}></NavBar>
       </div>
 
       <div className="DashboardMainContent">
@@ -29,7 +30,9 @@ export default function Dashboard() {
         <div className="div4">
           <TresBotones></TresBotones>
         </div>
-        <div className="div6">ACCIONES RAPIDAS</div>
+        <div className="div6">
+          <InfoDestacada></InfoDestacada>
+        </div>
       </div>
     </div>
   );

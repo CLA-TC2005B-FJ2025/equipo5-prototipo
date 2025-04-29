@@ -51,7 +51,6 @@ export default function Sidebar({ botonActivoAct }) {
           active={botonActivoAct === "Gestión de comentarios"}
           onClick={() => navegarPestana("gestionComentarios")}
         />
-        <BotonLogout></BotonLogout>
       </div>
     </div>
   );

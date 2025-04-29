@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import notificacion from "../../../public/images/navbar/notificacion.svg";
 
 export default function LogoutButton() {
   const [logOut, setLogOut] = useState("");
@@ -13,5 +14,5 @@ export default function LogoutButton() {
     }
   });
 
-  return <button onClick={() => setLogOut(true)}>Salir</button>;
+  return <button classN={"navBarBtn logoutBtn"} onClick={() => setLogOut(true)}><img src={notificacion}></img></button>;
 }
