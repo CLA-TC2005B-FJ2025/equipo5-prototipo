@@ -1,76 +1,87 @@
+import { useState, useEffect } from "react";
 import "../../Styles/SubirArchivoMenu.css";
 
-export default function MenuContextual() {
+export default function MenuContextual({ singleColumn = false }) {
+  const extraClass = singleColumn ? "single-column" : "";
+
+  const [maestros, setMaestros] = useState([]);
+  const [ecoas, setEcoas] = useState([]);
+  const [selectedMaestro, setSelectedMaestro] = useState("");
+  const [selectedEcoa, setSelectedEcoa] = useState("");
+  const [respuestas, setRespuestas] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Carga maestros y ecoas al montar
+  useEffect(() => {
+    fetch(`https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/resumen`)
+      .then(res => {
+        if (!res.ok) throw new Error(res.statusText);
+        return res.json();
+      })
+      .then(json => {
+        setMaestros(json.maestros);
+        setEcoas(json.ecoas);
+      })
+      .catch(err => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  // Carga respuestas cuando cambia la ECOA seleccionada
+  useEffect(() => {
+    if (!selectedEcoa) return;
+    setLoading(true);
+    fetch(`${import.meta.env.VITE_API_URL}/subirArchivo/datos/${selectedEcoa}`)
+      .then(res => {
+        if (!res.ok) throw new Error(res.statusText);
+        return res.json();
+      })
+      .then(json => setRespuestas(json.respuestas))
+      .catch(err => setError(err.message))
+      .finally(() => setLoading(false));
+  }, [selectedEcoa]);
+
+  if (loading) return <div className={`menu-contextual-container ${extraClass}`}>Cargando...</div>;
+  if (error)   return <div className={`menu-contextual-container ${extraClass}`}>Error: {error}</div>;
+
+  // Filtrar ECOAs por maestro seleccionado
+  const ecoasFiltradas = selectedMaestro
+    ? ecoas.filter(e => e.profesor === selectedMaestro)
+    : ecoas;
+
   return (
-    <div className="menu-contextual-container">
-      <div className="info-general">
-        <h1>Información General</h1>
-        <div className="info-grid">
-          <div className="info-item">
-            <label>Nombre del archivo</label>
-            <div className="info-value">ECOA#134324.csv</div>
-          </div>
+    <div className={`menu-contextual-container ${extraClass}`}>
+      <h1>Encuestas recientes</h1>
 
-          <div className="info-item">
-            <label>Grupo</label>
-            <div className="info-value">Grupo 501B</div>
-          </div>
+      <div className="filters">
+        <label>Maestro:</label>
+        <select value={selectedMaestro} onChange={e => setSelectedMaestro(e.target.value)}>
+          <option value="">Todos</option>
+          {maestros.map(m => <option key={m} value={m}>{m}</option>)}
+        </select>
 
-          <div className="info-item">
-            <label>Materia</label>
-            <div className="info-value">Implementación computacional II</div>
-          </div>
-
-          <div className="info-item">
-            <label>No. de Preguntas</label>
-            <div className="info-value">34</div>
-          </div>
-
-          <div className="info-item">
-            <label>Profesor</label>
-            <div className="info-value">Eliel Alfredo Mejía Villa</div>
-          </div>
-
-          <div className="info-item">
-            <label>No. de Respuestas</label>
-            <div className="info-value">42</div>
-          </div>
-
-          <div className="info-item">
-            <label>Supervisor</label>
-            <div className="info-value">Yahir Tapia</div>
-          </div>
-
-          <div className="info-item">
-            <label>Fecha</label>
-            <div className="info-value">9 de marzo del 2025</div>
-          </div>
-        </div>
+        <label>ECOA (CRN):</label>
+        <select value={selectedEcoa} onChange={e => setSelectedEcoa(e.target.value)}>
+          <option value="">Seleccione</option>
+          {ecoasFiltradas.map(e => (
+            <option key={e.crn} value={e.crn}>
+              {`ECOA ${e.crn} - ${e.grupo} (${e.materia})`}
+            </option>
+          ))}
+        </select>
       </div>
 
-      <div className="opciones-publicacion">
-        <h1>Opciones de publicación</h1>
-        <div className="opciones-grid">
-          <div className="visibilidad">
-            <label className="info-item">Visibilidad</label>
-            <div className="checkBntPE">
-              <input type="checkbox" checked />
-              <p>Directores Académicos</p>
+      {selectedEcoa && (
+        <div className="respuestas-list">
+          {respuestas.map((r, i) => (
+            <div key={i} className="respuesta-item">
+              <p><strong>Alumno:</strong> {r.alumno}</p>
+              <p><strong>Pregunta:</strong> {r.pregunta}</p>
+              <p><strong>Respuesta:</strong> {r.respuesta}</p>
             </div>
-            <div className="checkBntPE">
-              <input type="checkbox" checked />
-              <p>Coordinadores Académicos</p>
-            </div>
-            <div className="checkBntPE">
-              <input type="checkbox" checked />
-              <p>Profesores y Tutores</p>
-            </div>
-          </div>
+          ))}
         </div>
-        <div className="publicar-btn">
-          <button>Publicar ECOA</button>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

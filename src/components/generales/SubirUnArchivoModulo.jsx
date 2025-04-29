@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Input from "../generales/Input.jsx";
 import Papa from "papaparse";
 
 export default function SubirUnArchivo() {
-  const [archivo, setArchivo] = useState();
+  const [archivo, setArchivo] = useState(null);
   const [animacion, setAnimacion] = useState(false);
+  const navigate = useNavigate();
   const extensionesPermitidas = [".csv"];
 
   const validarExtension = nombre =>
@@ -23,22 +25,24 @@ export default function SubirUnArchivo() {
     reader.onload = e => {
       const contenido = e.target.result;
 
-      // parse completo, header=true
       const resultado = Papa.parse(contenido, {
         header: true,
         skipEmptyLines: true,
       });
 
-      // enviamos TODO el array de objetos
-      fetch("https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir", {
-        method: "POST",
-        headers: { "Content-Type": "application/json; charset=UTF-8" },
-        body: JSON.stringify({ encuestas: resultado.data }),
-      })
-        .then(res => res.ok ? res.text() : Promise.reject(res.statusText))
+      fetch(
+        "https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json; charset=UTF-8" },
+          body: JSON.stringify({ encuestas: resultado.data }),
+        }
+      )
+        .then(res => (res.ok ? res.text() : Promise.reject(res.statusText)))
         .then(msg => {
           console.log("Servidor:", msg);
-          alert("Encuestas subidas exitosamente!");
+          // Navega a la ruta deseada tras la carga
+          navigate('/subirArchivo');
         })
         .catch(err => {
           console.error("Error al subir:", err);
@@ -51,9 +55,9 @@ export default function SubirUnArchivo() {
   };
 
   const manejarArchivo = e => handleFiles(e.target.files);
-  const dropHandler     = e => { e.preventDefault(); setAnimacion(false); handleFiles(e.dataTransfer.files) };
+  const dropHandler = e => { e.preventDefault(); setAnimacion(false); handleFiles(e.dataTransfer.files) };
   const dragoverHandler = e => { e.preventDefault(); setAnimacion(true) };
-  const dragLeaveHandler= e => { e.preventDefault(); setAnimacion(false) };
+  const dragLeaveHandler = e => { e.preventDefault(); setAnimacion(false) };
 
   return (
     <div className="subirArchivoContainer">
