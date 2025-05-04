@@ -15,7 +15,9 @@ export default function GestionComentarios() {
   useEffect(() => {
     async function fetchProfesores() {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}directorio/profesores`);
+        const res = await fetch(
+          `${import.meta.env.VITE_API_URL}directorio/profesores`,
+        );
         if (!res.ok) throw new Error(res.statusText);
         const json = await res.json();
         setProfesores(json.profesores);
@@ -36,7 +38,7 @@ export default function GestionComentarios() {
       setLoading(true);
       try {
         const res = await fetch(
-          `${import.meta.env.VITE_API_URL}comentarios/gestion?matriculaMaestro=${encodeURIComponent(docente)}`
+          `${import.meta.env.VITE_API_URL}comentarios/gestion?matriculaMaestro=${encodeURIComponent(docente)}`,
         );
         if (!res.ok) throw new Error(res.statusText);
         const json = await res.json();
@@ -54,8 +56,6 @@ export default function GestionComentarios() {
   if (loadingProf) return <p>Cargando docentes...</p>;
   if (error) return <p>Error: {error}</p>;
 
-
-
   return (
     <div className="MainPageLayout">
       <div className="Sidebar">
@@ -64,24 +64,30 @@ export default function GestionComentarios() {
       <div className="Navbar">
         <NavBar Usuario={localStorage.getItem("userName")} />
       </div>
-      
+
       <div>
         <h1 className="headerDos">Gestión de comentarios</h1>
       </div>
       <div className="gestion-comentarios-content">
         <div className="gestion-box">
           <div className="header-bar">
-            <h3>ECOA’s de {docente ? profesores.find(p => p.matriculaMaestro === docente)?.nombreCompleto : "..."}</h3>
+            <h3>
+              ECOA’s de{" "}
+              {docente
+                ? profesores.find((p) => p.matriculaMaestro === docente)
+                    ?.nombreCompleto
+                : "..."}
+            </h3>
             <div>
               <p>Docente</p>
               <select
                 id="docente-select"
                 value={docente}
-                onChange={e => setDocente(e.target.value)}
+                onChange={(e) => setDocente(e.target.value)}
                 className="docente-select"
               >
                 <option value="">Selecciona docente</option>
-                {profesores.map(p => (
+                {profesores.map((p) => (
                   <option key={p.matriculaMaestro} value={p.matriculaMaestro}>
                     {p.nombreCompleto}
                   </option>
@@ -96,10 +102,16 @@ export default function GestionComentarios() {
             <div className="cards-grid">
               {materias.map((m, i) => (
                 <div key={i} className="EcoaCard">
-                  <h4><a href="#">{m.nombre}</a></h4>
+                  <h4>
+                    <a href="#">{m.nombre}</a>
+                  </h4>
                   <p>{m.total} Comentarios totales</p>
-                  {m.filtrados > 0 && <p>{m.filtrados} Comentarios filtrados</p>}
-                  {m.eliminados > 0 && <p>{m.eliminados} Comentario eliminado</p>}
+                  {m.filtrados > 0 && (
+                    <p>{m.filtrados} Comentarios filtrados</p>
+                  )}
+                  {m.eliminados > 0 && (
+                    <p>{m.eliminados} Comentario eliminado</p>
+                  )}
                 </div>
               ))}
             </div>

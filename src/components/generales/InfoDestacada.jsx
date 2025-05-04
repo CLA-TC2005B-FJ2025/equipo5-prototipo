@@ -40,8 +40,18 @@ export default function InfoDestacada() {
     fetchCounts();
   }, []);
 
-  if (loading) return <div className="infoDestacadaContainer"><p>Cargando...</p></div>;
-  if (error)   return <div className="infoDestacadaContainer"><p>Error: {error}</p></div>;
+  if (loading)
+    return (
+      <div className="infoDestacadaContainer">
+        <p>Cargando...</p>
+      </div>
+    );
+  if (error)
+    return (
+      <div className="infoDestacadaContainer">
+        <p>Error: {error}</p>
+      </div>
+    );
 
   return (
     <div className="infoDestacadaContainer">
@@ -51,22 +61,22 @@ export default function InfoDestacada() {
         <div className="infoDestacadaItem">
           <h1>{commentsCount}</h1>
           <p className="infoTitulo">Comentarios</p>
-          <p className="subtituloDos pointer" >VER LISTA</p>
+          <p className="subtituloDos pointer">VER LISTA</p>
         </div>
         <div className="infoDestacadaItem">
           <h1>{subjectsCount}</h1>
           <p className="infoTitulo">Materias</p>
-          <p className="subtituloDos pointer" >VER LISTA</p>
+          <p className="subtituloDos pointer">VER LISTA</p>
         </div>
         <div className="infoDestacadaItem">
           <h1>{filesCount}</h1>
           <p className="infoTitulo">Archivos</p>
-          <p className="subtituloDos pointer" >VER LISTA</p>
+          <p className="subtituloDos pointer">VER LISTA</p>
         </div>
       </div>
 
       <div className="infoDestacadaBoton">
-        <button >Ver todos los datos</button>
+        <button>Ver todos los datos</button>
       </div>
     </div>
   );

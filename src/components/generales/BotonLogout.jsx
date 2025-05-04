@@ -14,5 +14,9 @@ export default function LogoutButton() {
     }
   });
 
-  return <button classN={"navBarBtn logoutBtn"} onClick={() => setLogOut(true)}><img src={notificacion}></img></button>;
+  return (
+    <button classN={"navBarBtn logoutBtn"} onClick={() => setLogOut(true)}>
+      <img src={notificacion}></img>
+    </button>
+  );
 }

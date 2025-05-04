@@ -47,8 +47,7 @@ button.navBarBtn > img {
   transform: scale(1.2);
 }
 
-
-.logoutBtn{
+.logoutBtn {
   appearance: none;
-  filter: brightness(0) saturate(100%)
+  filter: brightness(0) saturate(100%);
 }

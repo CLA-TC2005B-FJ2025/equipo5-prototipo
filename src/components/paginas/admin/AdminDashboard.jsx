@@ -14,7 +14,9 @@ export default function Dashboard() {
         <Sidebar botonActivoAct="Dashboard"></Sidebar>
       </div>
       <div className="Navbar">
-        <NavBar Usuario={localStorage.getItem("userName").split("@")[0]}></NavBar>
+        <NavBar
+          Usuario={localStorage.getItem("userName").split("@")[0]}
+        ></NavBar>
       </div>
 
       <div className="DashboardMainContent">

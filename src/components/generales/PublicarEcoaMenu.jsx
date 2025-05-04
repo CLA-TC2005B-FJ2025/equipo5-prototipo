@@ -86,9 +86,7 @@ export default function MenuContextual({ singleColumn = false }) {
     : ecoas;
 
   // Información completa de la ECOA seleccionada
-  const infoSeleccionada = ecoas.find(
-    (e) => e.crn === Number(selectedEcoa)
-  );
+  const infoSeleccionada = ecoas.find((e) => e.crn === Number(selectedEcoa));
 
   return (
     <div className={`menu-contextual-container ${extraClass}`}>

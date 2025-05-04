@@ -1,8 +1,17 @@
 import { useState, useEffect } from "react";
-import { FaChalkboardTeacher, FaUserTie, FaUser, FaSearch } from "react-icons/fa";
+import {
+  FaChalkboardTeacher,
+  FaUserTie,
+  FaUser,
+  FaSearch,
+} from "react-icons/fa";
 
 export default function TresBotones() {
-  const [counts, setCounts] = useState({ profesores: 0, directivos: 0, otros: 0 });
+  const [counts, setCounts] = useState({
+    profesores: 0,
+    directivos: 0,
+    otros: 0,
+  });
   const [searchTerm, setSearchTerm] = useState("");
   const [results, setResults] = useState([]);
   const [loadingCounts, setLoadingCounts] = useState(true);
@@ -47,7 +56,7 @@ export default function TresBotones() {
     try {
       const base = import.meta.env.VITE_API_URL;
       const res = await fetch(
-        `${base}directorio/search?term=${encodeURIComponent(searchTerm)}`
+        `${base}directorio/search?term=${encodeURIComponent(searchTerm)}`,
       );
       if (!res.ok) throw new Error(res.statusText);
       const json = await res.json();

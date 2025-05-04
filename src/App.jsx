@@ -9,7 +9,7 @@ export default function App() {
   useEffect(() => {
     if (isLoggedIn) {
       //aqui es donde podemos mandar informacion sobre el usario ya una vez esta loggeado
-      localStorage.setItem("archivos", 0)
+      localStorage.setItem("archivos", 0);
       navigate("/dashboard");
     }
   }, [isLoggedIn, navigate]);

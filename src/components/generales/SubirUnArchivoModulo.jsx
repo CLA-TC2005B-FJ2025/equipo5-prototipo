@@ -7,7 +7,7 @@ import Spinner from "./Spinner.jsx";
 export default function SubirUnArchivo() {
   const [archivo, setArchivo] = useState(null);
   const [animacion, setAnimacion] = useState(false);
-  const [loading, setLoading] = useState(false);    // ← estado de carga
+  const [loading, setLoading] = useState(false); // ← estado de carga
   const navigate = useNavigate();
   const extensionesPermitidas = [".csv"];
 
@@ -22,7 +22,7 @@ export default function SubirUnArchivo() {
       return;
     }
 
-    setLoading(true);  // ← empieza animación
+    setLoading(true); // ← empieza animación
 
     const reader = new FileReader();
     reader.readAsText(file, "UTF-8");
@@ -33,14 +33,15 @@ export default function SubirUnArchivo() {
         skipEmptyLines: true,
       });
 
-      fetch("https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir", {
-        method: "POST",
-        headers: { "Content-Type": "application/json; charset=UTF-8" },
-        body: JSON.stringify({ encuestas: resultado.data }),
-      })
-        .then((res) =>
-          res.ok ? res.text() : Promise.reject(res.statusText)
-        )
+      fetch(
+        "https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json; charset=UTF-8" },
+          body: JSON.stringify({ encuestas: resultado.data }),
+        },
+      )
+        .then((res) => (res.ok ? res.text() : Promise.reject(res.statusText)))
         .then((msg) => {
           console.log("Encuestas agregadas exitosamente");
           // Asegúrate de almacenar un número

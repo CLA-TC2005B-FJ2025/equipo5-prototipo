@@ -12,7 +12,6 @@ export default function NavBar({ Usuario }) {
       <BotonConImg imagen={user} classN={"navBarBtn"}></BotonConImg>
       <BotonConImg imagen={settings} classN={"navBarBtn"}></BotonConImg>
       <LogoutButton></LogoutButton>
-      
     </div>
   );
 }
