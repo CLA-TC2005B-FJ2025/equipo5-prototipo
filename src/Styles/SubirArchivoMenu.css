@@ -54,13 +54,6 @@
   padding: 1.5rem;
 }
 
-/* Ajustes generales de texto/espaciado */
-h1,
-h2 {
-  color: var(--secondary-color);
-  margin: 0 0 1rem 0;
-}
-
 /* ——— Tarjetas de estadísticas ——— */
 .summary-cards {
   display: flex;
