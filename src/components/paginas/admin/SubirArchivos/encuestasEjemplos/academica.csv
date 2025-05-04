@@ -1,0 +1,243 @@
+Matricula,Materia,Grupo,Comentarios,Profesor,MatriculaProfesor,Clase,Departamento,Mi profesor(a) es puntual a la hora de entrar y salir de clases.,Mi profesor(a) motiva el trabajo ordenado y disciplinado.,Mi profesor(a) promueve la participación de los alumnos durante la clase.,"Mi profesor(a) es claro en las instrucciones para realizar las tareas, actividades, proyectos, entre otras.",Mi profesor(a) resuelve nuestras dudas y explica claramente.,Mi profesor(a) nos trata igual a mí y a todos mis compañeros y muestra interés por nuestro rendimiento académico.,Mi profesor(a) promueve los valores y en su clase se vive un ambiente de respeto tolerancia.,"Mi profesor(a) revisa en los tiempos acordados las tareas, actividades, exámenes, trabajos y reporta calificaciones en Algebraix.",Mi profesor(a) me inspira confianza y por eso me animo a pedirle ayuda cuando la necesito.,Mi profesor(a) esta motivado y apasionado por su materia.,Mi profesor(a) utiliza diferentes materiales y recursos como herramientas de apoyo en su clase.,Mi profesor(a) es amable y mantiene el temperamento bajo control.,¿Cómo calificarías las clases de tú profesor(a)? 1.-Pésimo                            10.- Excelente
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                       10.-Excelente.,1.- Pésimo.                       10.-Excelente.,1.- Pésimo.                       10.-Excelente.,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                       10.-Excelente.,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                  10.- Excelente.,1.- Pésimo.                  10.- Excelente.
+A1000,TC2005,1A,No me cae bien,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,8,7,10,10,8,10,10,8,8,8,6,9,9
+A1001,TC2005,1A,Es muy grosero,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,9,7,6,7,10,9,10,7,10,6,9,10,7
+A1002,TC2005,1A,No explica bien,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,7,9,7,10,10,6,9,10,7,8,6,6,9
+A1003,TC2005,1A,Explica muy bien,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,10,10,10,7,10,6,7,6,9,9,6,9,8
+A1004,TC2005,1A,El mejor profe,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,7,10,7,10,8,9,8,10,7,10,8,9,6
+A1005,TC2005,1A,Es bien chido,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,10,7,9,9,10,10,8,7,6,10,6,8,6
+A1006,TC2005,1A,Le entendi todo,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,8,6,6,8,10,9,7,9,8,10,10,10,9
+A1007,TC2005,1A,No le sabe,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,9,10,8,10,7,6,8,10,7,6,10,6,8
+A1008,TC2005,1A,No da asesorias,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,8,8,9,9,10,9,7,8,7,8,6,10,6
+A1009,TC2005,1A,Esta muy atento de otros alumnos,Amelia Bracho Rodríguez,A001,Artes Visuales I,Academico,7,6,9,9,6,8,9,9,8,7,7,10,6
+A1000,TC2006,1A,Es bien chido,Mario Carmona Dí­az,A002,Matematicas I,Academico,7,7,6,9,7,9,10,7,10,7,7,6,9
+A1001,TC2006,1A,,Mario Carmona Dí­az,A002,Matematicas I,Academico,9,6,6,7,10,8,7,6,6,6,10,10,8
+A1002,TC2006,1A,,Mario Carmona Dí­az,A002,Matematicas I,Academico,8,9,8,9,7,8,6,8,9,8,8,8,10
+A1003,TC2006,1A,,Mario Carmona Dí­az,A002,Matematicas I,Academico,7,7,7,10,10,9,10,6,10,10,9,7,6
+A1004,TC2006,1A,,Mario Carmona Dí­az,A002,Matematicas I,Academico,9,7,6,8,8,8,6,9,6,7,8,10,10
+A1005,TC2006,1A,No me cae bien,Mario Carmona Dí­az,A002,Matematicas I,Academico,6,8,8,6,6,10,10,8,6,9,9,6,7
+A1006,TC2006,1A,Es muy grosero,Mario Carmona Dí­az,A002,Matematicas I,Academico,8,9,10,7,6,7,9,6,6,6,9,9,7
+A1007,TC2006,1A,No explica bien,Mario Carmona Dí­az,A002,Matematicas I,Academico,6,9,8,8,7,6,9,10,10,6,10,10,9
+A1008,TC2006,1A,Explica muy bien,Mario Carmona Dí­az,A002,Matematicas I,Academico,10,6,6,10,6,10,6,7,7,8,7,9,8
+A1009,TC2006,1A,El mejor profe,Mario Carmona Dí­az,A002,Matematicas I,Academico,10,9,9,8,6,8,7,8,6,8,7,6,9
+A1000,TC2007,1A,Es bien chido,Laura Gómez Hernández,A003,Inglés I,Academico,9,10,6,7,8,8,7,10,8,10,7,9,6
+A1001,TC2007,1A,Le entendi todo,Laura Gómez Hernández,A003,Inglés I,Academico,6,8,9,9,9,9,9,7,6,6,9,6,10
+A1002,TC2007,1A,No le sabe,Laura Gómez Hernández,A003,Inglés I,Academico,10,6,8,10,8,6,10,10,7,7,9,6,7
+A1003,TC2007,1A,No da asesorias,Laura Gómez Hernández,A003,Inglés I,Academico,8,10,8,8,8,8,8,9,6,6,8,8,7
+A1004,TC2007,1A,Esta muy atento de otros alumnos,Laura Gómez Hernández,A003,Inglés I,Academico,10,10,7,8,10,6,10,10,10,6,10,7,6
+A1005,TC2007,1A,Es bien chido,Laura Gómez Hernández,A003,Inglés I,Academico,8,9,9,8,9,7,7,9,9,9,7,10,7
+A1006,TC2007,1A,,Laura Gómez Hernández,A003,Inglés I,Academico,10,6,6,8,9,10,7,6,6,8,7,10,9
+A1007,TC2007,1A,,Laura Gómez Hernández,A003,Inglés I,Academico,7,8,7,6,7,10,9,9,6,8,10,6,8
+A1008,TC2007,1A,,Laura Gómez Hernández,A003,Inglés I,Academico,10,8,10,8,8,6,8,10,7,9,6,10,9
+A1009,TC2007,1A,,Laura Gómez Hernández,A003,Inglés I,Academico,10,9,6,7,9,8,6,6,6,9,10,10,8
+A1000,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,8,10,10,9,10,8,7,10,6,6,9,10,9
+A1001,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,8,7,6,7,8,10,7,7,7,8,10,8,9
+A1002,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,10,6,9,7,10,10,7,7,8,6,7,7,7
+A1003,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,10,7,7,8,6,8,7,7,10,7,8,6,6
+A1004,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,7,10,8,6,6,7,8,10,9,9,8,10,9
+A1005,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,9,6,10,8,9,10,7,7,6,6,7,8,9
+A1006,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,6,7,7,9,10,6,8,7,7,10,7,7,10
+A1007,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,7,8,6,9,9,10,6,6,8,7,10,6,7
+A1008,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,6,10,10,7,6,9,7,8,8,10,10,7,8
+A1009,TC2008,1A,,Luis Silva Ortega,A004,Biología I,Academico,7,9,7,8,7,8,6,6,9,7,9,10,9
+A1010,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,8,9,9,6,7,9,8,10,9,6,6,9,7
+A1011,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,7,9,10,9,10,6,6,10,7,7,8,6,10
+A1012,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,10,8,7,8,10,9,7,10,9,10,8,10,8
+A1013,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,9,10,9,8,6,8,7,8,10,7,8,9,10
+A1014,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,9,10,7,10,10,8,6,6,10,10,7,6,9
+A1015,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,7,8,9,10,7,8,7,6,10,7,9,10,6
+A1016,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,6,8,8,6,6,9,9,10,8,10,9,7,8
+A1017,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,10,9,7,9,9,7,7,10,9,8,9,6,8
+A1018,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,8,9,7,10,8,7,8,8,9,7,8,9,9
+A1019,TC2006,1B,,Mario Carmona Dí­az,A002,Matematicas I,Academico,10,9,6,10,10,8,8,10,9,7,8,6,6
+A1010,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,7,8,9,9,9,10,7,7,8,10,10,8,6
+A1011,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,9,7,7,7,10,10,8,7,7,6,8,6,10
+A1012,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,9,10,6,7,6,10,7,9,9,8,6,9,9
+A1013,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,9,6,8,6,9,9,6,6,9,9,6,7,7
+A1014,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,7,6,10,8,6,8,6,6,10,9,10,10,7
+A1015,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,8,8,10,7,7,10,9,9,9,8,9,8,9
+A1016,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,8,7,9,9,10,10,8,8,9,6,8,6,9
+A1017,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,8,7,8,10,6,6,9,8,10,6,7,10,6
+A1018,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,10,8,7,6,6,6,7,8,7,7,7,10,6
+A1019,TC2009,1B,,Ana López Martínez,A005,Historia I,Academico,9,7,10,8,8,7,6,9,7,10,6,7,10
+A1010,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,6,10,8,8,6,8,9,10,6,7,6,6,10
+A1011,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,7,6,9,8,9,8,7,6,6,8,8,9,6
+A1012,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,9,7,9,8,8,6,6,8,8,10,8,6,10
+A1013,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,8,7,8,9,7,9,10,10,8,6,10,7,7
+A1014,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,6,8,6,7,7,8,8,7,6,10,8,9,7
+A1015,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,6,6,9,9,7,6,9,8,9,10,9,9,9
+A1016,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,10,6,7,10,9,10,7,6,6,7,7,8,8
+A1017,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,6,7,6,6,6,9,9,8,10,7,9,9,9
+A1018,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,6,10,9,8,8,9,8,6,8,8,9,8,8
+A1019,TC2008,1B,,Luis Silva Ortega,A004,Biología I,Academico,9,8,9,6,6,7,8,9,10,6,8,6,10
+A1010,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,6,10,9,10,8,8,9,10,7,9,10,8,6
+A1011,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,9,6,7,9,9,8,6,9,6,9,8,10,7
+A1012,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,7,10,9,7,7,7,6,8,8,7,9,9,7
+A1013,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,7,9,8,10,10,8,8,7,7,9,9,8,10
+A1014,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,9,8,10,6,8,10,7,8,10,9,6,10,8
+A1015,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,9,9,7,7,10,8,10,6,9,7,7,7,9
+A1016,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,6,8,7,8,10,9,8,8,7,10,7,6,10
+A1017,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,6,10,9,7,8,10,7,10,8,10,9,10,10
+A1018,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,9,10,8,9,6,6,6,7,9,10,9,10,9
+A1019,TC2007,1B,,Laura Gómez Hernández,A003,Inglés I,Academico,9,9,8,8,10,8,8,9,6,7,9,8,10
+A1020,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,7,7,9,6,8,9,8,6,6,9,6,6,7
+A1021,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,8,6,8,8,6,6,6,6,10,10,8,10,8
+A1022,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,6,8,7,8,10,7,7,10,7,6,9,9,10
+A1023,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,6,6,7,6,7,6,6,9,9,9,8,7,7
+A1024,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,8,6,10,6,8,9,10,6,7,9,8,10,8
+A1025,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,7,7,9,9,10,6,7,9,7,9,9,6,8
+A1026,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,10,7,8,7,10,8,9,8,9,10,7,8,9
+A1027,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,10,9,6,10,8,9,8,6,6,6,10,10,6
+A1028,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,10,7,7,9,8,8,10,9,9,6,10,7,7
+A1029,TC2010,2A,,Mario Carmona Dí­az,A002,Matematicas II,Academico,6,8,8,6,8,8,10,10,7,6,6,6,10
+A1020,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,10,10,7,9,7,7,8,8,10,7,10,6,10
+A1021,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,8,10,8,6,6,9,6,9,10,6,7,10,9
+A1022,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,8,10,10,9,8,8,10,8,7,10,9,6,8
+A1023,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,6,7,7,8,10,10,10,9,6,7,8,8,9
+A1024,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,8,6,9,8,8,10,10,9,8,9,8,7,8
+A1025,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,6,10,10,8,6,8,9,7,6,9,10,6,8
+A1026,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,6,8,6,6,7,10,6,7,7,10,10,7,8
+A1027,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,6,7,10,7,6,10,10,7,7,7,7,8,7
+A1028,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,7,7,10,6,7,8,6,7,6,9,7,7,10
+A1029,TC2011,2A,,Amelia Bracho Rodríguez,A001,Literatura II,Academico,9,9,6,9,9,6,9,8,7,9,9,8,7
+A1020,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,8,8,8,8,7,9,9,6,10,7,9,7,6
+A1021,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,9,8,6,8,8,8,10,8,6,6,7,8,10
+A1022,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,9,8,7,8,7,8,9,10,9,10,8,9,9
+A1023,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,9,10,6,7,8,9,6,6,10,10,6,9,10
+A1024,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,8,9,8,6,10,6,6,8,7,10,10,6,9
+A1025,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,9,10,8,8,9,9,10,6,8,6,9,9,10
+A1026,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,6,8,7,7,10,9,10,10,6,7,10,7,9
+A1027,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,6,8,7,9,8,8,8,9,10,8,9,8,7
+A1028,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,8,8,7,9,8,8,6,8,9,8,8,10,9
+A1029,TC2012,2A,,Luis Silva Ortega,A004,Física II,Academico,7,7,10,6,6,9,7,9,10,6,10,8,6
+A1020,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,9,9,10,9,10,7,6,7,9,8,10,7,9
+A1021,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,9,9,9,10,9,8,7,7,8,8,10,10,10
+A1022,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,6,9,8,7,6,10,7,9,6,10,10,10,7
+A1023,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,7,9,10,9,9,8,7,9,6,8,6,8,8
+A1024,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,9,9,7,9,6,6,7,9,9,8,8,10,8
+A1025,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,6,10,8,8,7,9,6,8,8,8,8,9,8
+A1026,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,6,6,8,7,8,10,8,8,10,10,6,10,7
+A1027,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,8,7,8,9,6,9,6,8,7,8,10,10,10
+A1028,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,9,9,7,8,10,8,7,9,10,8,6,6,6
+A1029,TC2013,2A,,Laura Gómez Hernández,A003,Inglés II,Academico,6,9,10,7,7,9,7,6,9,6,9,9,6
+A1030,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,8,9,7,9,9,7,9,10,7,6,10,6,8
+A1031,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,8,9,7,8,8,8,8,10,6,8,8,8,6
+A1032,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,6,7,10,9,7,8,10,10,8,10,8,6,9
+A1033,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,6,7,8,9,10,10,7,10,9,8,10,6,8
+A1034,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,8,7,8,9,8,6,6,9,6,8,9,6,8
+A1035,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,7,6,9,9,6,7,10,10,9,8,9,9,9
+A1036,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,9,8,7,8,9,7,9,7,10,10,6,7,10
+A1037,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,10,9,9,10,10,9,10,6,8,8,7,7,10
+A1038,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,9,7,9,8,8,7,7,10,8,10,7,6,10
+A1039,TC2010,2B,,Mario Carmona Dí­az,A002,Matematicas II,Academico,7,9,6,7,9,8,8,6,6,6,8,9,8
+A1030,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,7,9,7,6,8,10,7,9,9,7,6,9,8
+A1031,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,10,10,7,8,8,8,7,10,10,9,10,8,8
+A1032,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,9,9,6,7,9,7,6,9,6,8,8,6,6
+A1033,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,8,8,10,10,7,7,9,7,7,10,6,6,7
+A1034,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,9,8,10,7,7,7,10,9,9,9,8,7,7
+A1035,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,6,9,10,8,8,9,7,9,9,7,9,8,6
+A1036,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,6,8,9,7,9,8,9,7,7,10,6,6,7
+A1037,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,10,10,10,8,9,6,6,8,9,9,7,10,6
+A1038,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,10,7,9,10,6,9,8,7,10,10,9,7,7
+A1039,TC2014,2B,,Ana López Martí­nez,A006,Historia II,Academico,7,6,7,8,8,10,9,8,9,6,10,8,10
+A1030,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,8,8,7,7,7,6,8,10,8,7,9,7,10
+A1031,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,8,6,6,9,9,7,10,7,7,8,9,6,7
+A1032,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,7,6,9,8,7,6,9,9,7,8,6,9,7
+A1033,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,10,8,7,6,6,10,9,10,10,7,6,10,6
+A1034,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,6,7,7,8,6,8,7,9,9,9,9,8,10
+A1035,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,9,9,9,8,7,7,7,10,8,8,7,9,10
+A1036,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,7,7,10,9,9,8,7,10,6,6,7,6,8
+A1037,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,9,10,9,10,7,7,8,7,6,6,9,8,10
+A1038,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,7,9,10,8,9,8,8,6,6,9,10,9,6
+A1039,TC2015,2B,,Luis Silva Ortega,A004,Química II,Academico,7,8,9,6,6,6,7,8,8,6,8,10,8
+A1030,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,10,9,7,7,8,9,6,7,6,7,10,8,8
+A1031,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,8,8,9,7,9,9,9,10,7,6,9,8,7
+A1032,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,7,6,6,9,10,10,10,10,8,7,6,9,6
+A1033,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,7,6,9,9,8,6,9,7,10,6,7,9,10
+A1034,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,10,7,7,7,10,8,7,7,10,8,7,7,8
+A1035,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,9,10,6,9,7,6,10,10,7,6,6,6,8
+A1036,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,9,6,6,8,9,9,8,7,7,6,10,10,6
+A1037,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,8,7,6,8,9,8,10,6,10,9,8,6,9
+A1038,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,9,6,8,7,7,10,6,7,8,7,7,6,7
+A1039,TC2013,2B,,Laura Gómez Hernández,A003,Inglés II,Academico,6,7,10,8,7,10,8,9,9,10,10,10,7
+A1040,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,8,10,8,6,8,9,7,8,6,7,7,10,6
+A1041,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,10,9,9,8,8,8,7,9,6,7,9,9,7
+A1042,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,8,8,9,8,7,10,9,7,6,10,7,7,10
+A1043,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,9,7,10,10,9,8,10,9,10,10,10,8,9
+A1044,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,7,10,6,9,8,10,7,6,10,10,8,6,9
+A1045,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,8,8,10,9,9,10,7,10,10,10,6,6,8
+A1046,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,9,10,6,8,6,6,10,7,7,6,6,6,10
+A1047,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,10,6,6,10,10,6,8,8,8,7,7,9,8
+A1048,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,10,6,6,9,7,7,8,9,10,9,10,8,8
+A1049,TC2016,3A,,Mario Carmona Dí­az,A002,Matematicas III,Academico,7,9,9,6,6,9,9,8,10,8,8,7,10
+A1040,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,6,7,9,6,9,9,7,6,8,7,10,10,6
+A1041,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,10,9,10,10,10,6,10,8,7,10,6,6,10
+A1042,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,7,7,10,7,10,7,7,9,6,7,6,7,8
+A1043,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,10,6,6,8,10,6,6,6,10,6,7,6,8
+A1044,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,8,10,9,7,6,6,7,8,7,7,9,9,9
+A1045,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,7,8,8,6,6,6,9,10,8,6,9,9,6
+A1046,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,9,7,7,6,8,6,8,6,6,7,6,7,8
+A1047,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,7,10,6,6,9,7,8,10,8,7,7,10,9
+A1048,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,6,7,6,10,6,10,6,6,9,6,7,10,8
+A1049,TC2017,3A,,José Hernández Ruiz,A007,Filosofía,Academico,8,9,8,6,8,6,7,6,9,7,10,8,9
+A1040,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,9,6,6,7,8,10,7,9,9,9,9,10,7
+A1041,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,9,6,9,10,9,9,9,8,6,8,10,10,10
+A1042,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,10,10,9,8,9,6,10,7,10,10,7,6,7
+A1043,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,9,8,9,7,6,8,10,6,8,6,10,8,10
+A1044,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,6,10,9,10,6,8,7,10,7,7,8,7,6
+A1045,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,6,9,7,10,9,8,9,10,6,7,6,10,10
+A1046,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,9,10,8,8,6,7,10,7,6,7,8,9,10
+A1047,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,8,9,6,8,6,7,9,10,6,6,9,10,7
+A1048,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,9,8,6,10,10,6,6,8,8,9,6,7,7
+A1049,TC2018,3A,,Amelia Bracho Rodríguez,A001,Artes Visuales III,Academico,7,10,8,9,10,7,8,7,10,10,7,7,10
+A1040,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,10,9,10,7,10,8,7,8,9,8,9,10,10
+A1041,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,8,6,6,7,10,8,8,8,8,10,10,10,7
+A1042,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,7,9,8,10,10,7,10,10,10,10,7,6,9
+A1043,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,6,7,10,9,7,7,6,7,6,8,6,8,8
+A1044,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,6,6,9,8,8,7,8,10,9,10,7,8,8
+A1045,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,6,8,8,10,6,9,8,10,9,7,10,10,6
+A1046,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,8,8,9,7,8,7,9,7,9,6,6,6,8
+A1047,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,8,7,6,8,6,9,7,8,7,6,6,9,6
+A1048,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,8,8,10,6,10,9,7,10,6,9,6,7,10
+A1049,TC2019,3A,,Laura Gómez Hernández,A003,Inglés III,Academico,7,9,8,8,8,8,10,6,6,7,10,10,6
+A1050,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,9,6,10,8,9,8,6,10,7,6,8,9,8
+A1051,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,10,10,8,9,9,10,9,6,6,7,6,7,8
+A1052,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,6,8,9,7,7,7,6,10,7,8,10,6,7
+A1053,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,9,10,8,8,9,10,8,6,9,10,9,6,7
+A1054,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,10,7,9,9,7,7,9,6,9,6,10,6,6
+A1055,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,9,9,10,9,7,6,8,6,8,9,6,9,7
+A1056,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,7,8,6,8,10,9,9,8,8,6,9,9,9
+A1057,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,8,10,8,9,7,9,10,10,7,6,8,7,10
+A1058,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,9,10,8,8,8,9,8,6,7,6,10,7,10
+A1059,TC2016,3B,,Mario Carmona Dí­az,A002,Matematicas III,Academico,10,7,7,6,8,9,7,7,7,6,10,7,9
+A1050,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,9,7,8,7,6,8,10,10,8,8,7,7,6
+A1051,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,8,9,9,8,7,10,8,6,8,8,9,7,10
+A1052,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,8,6,10,6,6,9,9,9,7,8,7,10,9
+A1053,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,10,8,9,9,7,6,7,9,7,6,8,9,6
+A1054,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,6,7,9,9,7,6,6,9,6,8,8,10,10
+A1055,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,9,10,10,6,8,8,8,9,8,6,6,8,7
+A1056,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,10,7,8,6,6,8,8,7,10,6,6,10,10
+A1057,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,7,6,6,7,6,9,10,8,8,8,8,6,8
+A1058,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,10,7,8,9,6,6,6,9,9,6,7,10,6
+A1059,TC2017,3B,,José Hernández Ruiz,A007,Filosofía,Academico,7,7,6,8,6,6,6,10,10,7,8,10,9
+A1050,TC2020,3B,,Luis Silva Ortega,A004,Qumíica III,Academico,9,8,10,7,7,8,10,6,9,8,9,9,8
+A1051,TC2020,3B,,Luis Silva Ortega,A004,Qumíica III,Academico,7,9,9,6,8,8,9,7,7,7,9,10,7
+A1052,TC2020,3B,,Luis Silva Ortega,A004,Qumíica III,Academico,8,10,10,6,6,10,9,10,9,9,9,10,6
+A1053,TC2020,3B,,Luis Silva Ortega,A004,Qumíica III,Academico,6,9,10,10,10,7,10,10,6,9,7,8,6
+A1054,TC2020,3B,,Luis Silva Ortega,A004,Qumíica III,Academico,7,8,8,9,7,9,7,9,9,8,6,7,10
+A1055,TC2020,3B,No me cae bien,Luis Silva Ortega,A004,Qumíica III,Academico,7,7,6,7,8,9,6,6,8,10,9,7,8
+A1056,TC2020,3B,Es muy grosero,Luis Silva Ortega,A004,Qumíica III,Academico,8,10,7,7,6,8,8,7,10,8,9,7,8
+A1057,TC2020,3B,No explica bien,Luis Silva Ortega,A004,Qumíica III,Academico,8,7,8,6,10,9,9,9,6,10,7,9,6
+A1058,TC2020,3B,Explica muy bien,Luis Silva Ortega,A004,Qumíica III,Academico,9,6,7,8,7,6,8,8,9,9,10,9,7
+A1059,TC2020,3B,El mejor profe,Luis Silva Ortega,A004,Qumíica III,Academico,9,10,6,10,8,7,6,10,10,8,9,9,8
+A1050,TC2019,3B,Es bien chido,Laura Gómez Hernández,A003,Inglés III,Academico,10,6,7,6,9,6,10,7,6,9,7,10,8
+A1051,TC2019,3B,Le entendi todo,Laura Gómez Hernández,A003,Inglés III,Academico,6,8,10,6,9,7,8,7,6,9,10,9,6
+A1052,TC2019,3B,No le sabe,Laura Gómez Hernández,A003,Inglés III,Academico,9,10,8,7,6,9,8,10,7,9,9,6,9
+A1053,TC2019,3B,No da asesorias,Laura Gómez Hernández,A003,Inglés III,Academico,7,10,8,6,6,10,8,8,7,9,9,7,7
+A1054,TC2019,3B,Esta muy atento de otros alumnos,Laura Gómez Hernández,A003,Inglés III,Academico,7,7,8,7,7,10,10,9,10,7,7,9,9
+A1055,TC2019,3B,Es bien chido,Laura Gómez Hernández,A003,Inglés III,Academico,7,10,7,9,7,9,8,8,10,9,8,10,10
+A1056,TC2019,3B,,Laura Gómez Hernández,A003,Inglés III,Academico,10,8,10,9,9,9,9,6,8,7,10,6,6
+A1057,TC2019,3B,,Laura Gómez Hernández,A003,Inglés III,Academico,7,9,8,8,6,8,8,6,9,6,9,7,6
+A1058,TC2019,3B,,Laura Gómez Hernández,A003,Inglés III,Academico,8,6,6,9,9,9,9,7,6,7,10,8,9
+A1059,TC2019,3B,,Laura Gómez Hernández,A003,Inglés III,Academico,10,7,8,10,8,9,10,7,10,6,8,7,10
