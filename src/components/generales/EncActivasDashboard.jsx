@@ -11,7 +11,7 @@ export default function EncuestasActivas() {
 
   useEffect(() => {
     fetch(
-      `https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/resumenConConteo`,
+      `${import.meta.env.VITE_API_URL}subirArchivo/resumenConConteo`,
     )
       .then((res) => {
         if (!res.ok) throw new Error(res.statusText);

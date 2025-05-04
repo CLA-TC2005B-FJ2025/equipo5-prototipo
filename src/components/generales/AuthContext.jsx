@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
     console.log("here");
     try {
       const response = await fetch(
-        "https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/login",
+        `${import.meta.env.VITE_API_URL}login`,
         {
           method: "POST",
           headers: {

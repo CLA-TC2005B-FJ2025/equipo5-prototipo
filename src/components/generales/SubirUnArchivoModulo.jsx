@@ -34,7 +34,7 @@ export default function SubirUnArchivo() {
       });
 
       fetch(
-        "https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir",
+        `${import.meta.env.VITE_API_URL}subirArchivo/subir`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json; charset=UTF-8" },
