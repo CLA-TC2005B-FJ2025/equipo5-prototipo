@@ -12,6 +12,7 @@ import "../../Styles/SubirArchivoMenu.css";
 
 export default function MenuContextual({ singleColumn = false }) {
   const extraClass = singleColumn ? "single-column" : "";
+
   const [maestros, setMaestros] = useState([]);
   const [ecoas, setEcoas] = useState([]);
   const [selectedMaestro, setSelectedMaestro] = useState("");
@@ -20,11 +21,9 @@ export default function MenuContextual({ singleColumn = false }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Carga maestros y ecoas al montar
+  // Carga maestros y ecoas (con agregados) al montar
   useEffect(() => {
-    fetch(
-      `https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/resumen`,
-    )
+    fetch(`${import.meta.env.VITE_API_URL}subirArchivo/resumen`)
       .then((res) => {
         if (!res.ok) throw new Error(res.statusText);
         return res.json();
@@ -51,7 +50,7 @@ export default function MenuContextual({ singleColumn = false }) {
       .finally(() => setLoading(false));
   }, [selectedEcoa]);
 
-  // Datos agregados para el gráfico: promedio de respuesta por pregunta
+  // Calcular promedio por pregunta para el gráfico
   const chartData = useMemo(() => {
     const agg = {};
     respuestas.forEach(({ pregunta, respuesta }) => {
@@ -66,23 +65,30 @@ export default function MenuContextual({ singleColumn = false }) {
     }));
   }, [respuestas]);
 
-  if (loading)
+  if (loading) {
     return (
       <div className={`menu-contextual-container ${extraClass}`}>
         Cargando...
       </div>
     );
-  if (error)
+  }
+  if (error) {
     return (
       <div className={`menu-contextual-container ${extraClass}`}>
         Error: {error}
       </div>
     );
+  }
 
   // Filtrar ECOAs por maestro seleccionado
   const ecoasFiltradas = selectedMaestro
     ? ecoas.filter((e) => e.profesor === selectedMaestro)
     : ecoas;
+
+  // Información completa de la ECOA seleccionada
+  const infoSeleccionada = ecoas.find(
+    (e) => e.crn === Number(selectedEcoa)
+  );
 
   return (
     <div className={`menu-contextual-container ${extraClass}`}>
@@ -110,32 +116,64 @@ export default function MenuContextual({ singleColumn = false }) {
           <option value="">Seleccione</option>
           {ecoasFiltradas.map((e) => (
             <option key={e.crn} value={e.crn}>
-              {`ECOA ${e.crn} - ${e.grupo} (${e.materia})`}
+              {`ECOA ${e.crn} – ${e.grupo} (${e.materia})`}{" "}
             </option>
           ))}
         </select>
       </div>
 
-      {selectedEcoa && (
-        <div className="chart-container">
-          <h2>Promedio de respuestas por pregunta</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart
-              data={chartData}
-              margin={{ top: 20, right: 30, left: 20, bottom: 80 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis
-                dataKey="pregunta"
-                angle={-45}
-                textAnchor="end"
-                height={80}
-              />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="promedio" fill="#8884d8" />
-            </BarChart>
-          </ResponsiveContainer>
+      {selectedEcoa && infoSeleccionada && (
+        <div className="ecoas-layout">
+          {/* Gráfico al 60% */}
+          <div className="chart-container">
+            <h2>Promedio de respuestas por pregunta</h2>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart
+                data={chartData}
+                margin={{ top: 20, right: 30, left: 20, bottom: 80 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis
+                  dataKey="pregunta"
+                  angle={-45}
+                  textAnchor="end"
+                  height={80}
+                />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="promedio" fill="var(--primary-color)" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* Resumen a la derecha al 40% con tarjetas */}
+          <div className="details-card summary-right">
+            <h3>Resumen ECOA {infoSeleccionada.crn}</h3>
+            <div className="summary-cards">
+              <div className="stat-card">
+                <div className="stat-value">{infoSeleccionada.profesor}</div>
+                <div className="stat-label">Profesor</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">
+                  {infoSeleccionada.respuestasCount}
+                </div>
+                <div className="stat-label">Respuestas totales</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">
+                  {infoSeleccionada.promedioGlobal.toFixed(2)}
+                </div>
+                <div className="stat-label">Promedio global</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">
+                  {infoSeleccionada.comentariosCount}
+                </div>
+                <div className="stat-label">Comentarios</div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

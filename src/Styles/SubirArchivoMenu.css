@@ -1,95 +1,109 @@
+/* Contenedor principal */
 .menu-contextual-container {
   grid-area: MainContenido;
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  max-width: 1000px;
   background: var(--form-bg);
-  border-radius: 15px;
-  flex-direction: column;
-  max-width: 600px;
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--box-shadow-card);
   position: relative;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 0);
 }
 
-.info-general,
-.opciones-publicacion {
+/* Filtros (Maestro + ECOA) */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters label {
+  font-weight: bold;
+  color: var(--text-dark-two);
+  white-space: nowrap;
+}
+
+.filters select {
   flex: 1;
+  min-width: 140px;
+  padding: var(--padding-default);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius-default);
+  background: #fff;
+  cursor: pointer;
 }
 
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Gráfico */
+.chart-container {
+  padding: 1.5rem;
+  background: var(--background-light);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--box-shadow-card);
+  margin-bottom: 2rem;
+}
+
+/* Detalles adicionales */
+.details-card {
+  padding: 1.5rem;
+}
+
+/* Ajustes generales de texto/espaciado */
+h1, h2 {
+  color: var(--secondary-color);
+  margin: 0 0 1rem 0;
+}
+
+/* ——— Tarjetas de estadísticas ——— */
+.summary-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.info-item label {
+.stat-card {
+  flex: 1;
+  background: var(--background-light);
+  padding: 1rem;
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--box-shadow-card);
+  text-align: center;
+}
+
+.stat-card:first-child{
+  flex:2;
+}
+
+.stat-value {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: var(--text-dark-two);
+  color: var(--primary-color);
 }
 
-label.info-item {
+.stat-label {
+  margin-top: 0.5rem;
+  color: var(--text-dark-two);
   font-weight: bold;
-  color: black;
+  font-size: 0.9rem;
 }
 
-.checkBntPE {
-  height: 35px;
-  display: flex;
-  align-items: center; /* Alinea verticalmente checkbox y texto */
-  gap: 0.5rem; /* Separación entre checkbox y texto */
-}
-
-.checkBntPE input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--primary-color);
-  cursor: pointer;
-}
-
-.checkBntPE p {
-  margin: 0;
-  font-size: 1rem;
-  color: var(--text-dark-two);
-}
-
-.info-value {
-  background-color: #ddd;
-  padding: 0.5rem;
-  border-radius: 8px;
-  margin-top: 0.25rem;
-}
-
-.opciones-grid {
-  padding-top: 1rem;
-  display: flex;
-}
-
-.visibilidad {
-  display: flex;
-  flex-direction: column;
-}
-
-.publicar-btn {
-  display: flex;
-  justify-content: center;
-}
-
-.publicar-btn > button {
-  align-self: center;
-  justify-self: center;
-  width: 40%;
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.publicar-btn > button:hover {
-  background-color: var(--primary-hover-color);
+/* Responsive: apilar tarjetas en pantallas <900px */
+@media (max-width: 900px) {
+  .chart-container {
+    flex: 0 0 100%;
+  }
+  .details-card.summary-right {
+    flex: 0 0 100%;
+  }
+  .stat-card {
+    flex: 1 1 100%;
+  }
 }

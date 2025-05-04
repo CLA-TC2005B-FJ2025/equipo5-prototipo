@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../generales/Input.jsx";
 import Papa from "papaparse";
+import Spinner from "./Spinner.jsx";
 
 export default function SubirUnArchivo() {
   const [archivo, setArchivo] = useState(null);
   const [animacion, setAnimacion] = useState(false);
+  const [loading, setLoading] = useState(false);    // ← estado de carga
   const navigate = useNavigate();
   const extensionesPermitidas = [".csv"];
 
@@ -20,37 +22,40 @@ export default function SubirUnArchivo() {
       return;
     }
 
+    setLoading(true);  // ← empieza animación
+
     const reader = new FileReader();
     reader.readAsText(file, "UTF-8");
     reader.onload = (e) => {
       const contenido = e.target.result;
-
       const resultado = Papa.parse(contenido, {
         header: true,
         skipEmptyLines: true,
       });
 
-      fetch(
-        "https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json; charset=UTF-8" },
-          body: JSON.stringify({ encuestas: resultado.data }),
-        },
-      )
-        .then((res) => (res.ok ? res.text() : Promise.reject(res.statusText)))
+      fetch("https://didactic-journey-pjj577p6pg4j39rv6-3000.app.github.dev/subirArchivo/subir", {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=UTF-8" },
+        body: JSON.stringify({ encuestas: resultado.data }),
+      })
+        .then((res) =>
+          res.ok ? res.text() : Promise.reject(res.statusText)
+        )
         .then((msg) => {
-          console.log("Encuestas Agregadas de manera exitosa");
-          // Navega a la ruta deseada tras la carga
-          localStorage.setItem("archivos", localStorage.getItem("archivos") + 1)
+          console.log("Encuestas agregadas exitosamente");
+          // Asegúrate de almacenar un número
+          const prev = parseInt(localStorage.getItem("archivos") || "0", 10);
+          localStorage.setItem("archivos", prev + 1);
           navigate("/subirArchivo");
         })
         .catch((err) => {
           console.error("Error al subir:", err);
           alert("Hubo un error.");
+        })
+        .finally(() => {
+          setLoading(false); // ← termina animación
         });
     };
-
     reader.readAsText(file, "ISO-8859-1");
     setArchivo(file);
   };
@@ -72,6 +77,13 @@ export default function SubirUnArchivo() {
 
   return (
     <div className="subirArchivoContainer">
+      {/* overlay spinner */}
+      {loading && (
+        <div className="spinner-overlay">
+          <Spinner />
+        </div>
+      )}
+
       <h2>Subir un archivo</h2>
       <div
         className={`dropzone ${animacion ? "activo" : ""}`}
@@ -85,11 +97,9 @@ export default function SubirUnArchivo() {
           src="/images/sidebar/upload.svg"
           alt="icono de subir archivo"
         />
-
         <p>
           <b>Arrastra</b> y <b>suelta</b> el archivo.
         </p>
-
         <div>
           <label className="botonSubirArchivo" htmlFor="subir-archivo">
             Seleccionar
@@ -98,7 +108,7 @@ export default function SubirUnArchivo() {
             type="file"
             id="subir-archivo"
             className="inputSubir"
-            accept=".csv,.xlsx"
+            accept=".csv"
             onChange={manejarArchivo}
           />
         </div>
